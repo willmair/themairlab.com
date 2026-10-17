@@ -218,12 +218,13 @@
   if (form) {
     var TOPICS = {
       postdoc: "Postdoc position", phd: "Graduate rotation / PhD", ra: "Research assistant or student project",
-      media: "Media enquiry", collab: "Collaboration", giving: "Supporting the lab", speaking: "Speaking invitation"
+      media: "Media enquiry", collab: "Collaboration", giving: "Supporting the lab", speaking: "Speaking invitation", consulting: "Consulting or advisory"
     };
     var HINTS = {
       "Postdoc position": "Please include a short note on the questions that excite you, and the names of three references. You can share a link to your CV.",
       "Graduate rotation / PhD": "Let us know your program and when you’re hoping to rotate.",
       "Media enquiry": "Please include your outlet and deadline.",
+      "Consulting or advisory": "Please include your organization and a short description of what you have in mind.",
       "Supporting the lab": "Thank you. Will will be in touch personally."
     };
     var topicSel = form.querySelector("#cf-topic"), hint = form.querySelector("#cf-hint"), status = form.querySelector("#cf-status");
