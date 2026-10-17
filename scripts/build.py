@@ -101,7 +101,7 @@ FOOT = """</main>
           <li><a href="contact.html">Contact the lab</a></li>
           <li><a href="https://willmair.com" target="_blank" rel="noopener">willmair.com</a></li>
           <li><a href="https://www.linkedin.com/in/willmair/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://hsph.harvard.edu/research/mair-lab/" target="_blank" rel="noopener">Harvard Chan profile</a></li>
+          <li><a href="https://hsph.harvard.edu/profile/william-b-mair/" target="_blank" rel="noopener">Harvard Chan faculty page</a></li>
           <li><a href="https://hsph.harvard.edu/research/healthy-aging/" target="_blank" rel="noopener">Healthy Aging Initiative</a></li>
         </ul>
       </div>
