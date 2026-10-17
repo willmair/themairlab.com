@@ -44,7 +44,7 @@ HEAD = """<!doctype html>
 <meta name="theme-color" content="#0B1218">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta property="og:image" content="https://themairlab.com/assets/img/brand/og-card.png">
+<meta property="og:image" content="https://themairlab.com/assets/img/brand/og-card-2.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MAIR Lab, Metabolism and Aging Integrative Research, Harvard T.H. Chan School of Public Health">
