@@ -209,9 +209,10 @@
   }
 
   /* ---- Contact form ----------------------------------------------------
-     Messages are delivered by Web3Forms (https://web3forms.com) to Will's
-     inbox. Access key for the Web3Forms form (delivers to Will's Gmail). Every message arrives
-     with a subject starting "[themairlab.com]".                              */
+     Messages are delivered by Web3Forms (https://web3forms.com) to
+     wmair@hsph.harvard.edu (recipient set in the Web3Forms dashboard).
+     Subjects start "MAIR Lab website –". The sender name deliberately has
+     no web address in it, so Harvard's spam filter doesn't flag it.        */
   var CONTACT_FORM_KEY = "fe2d9e97-2d71-44a4-8501-87e318278dcf";
 
   var form = document.getElementById("contact-form");
@@ -250,11 +251,10 @@
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           access_key: CONTACT_FORM_KEY,
-          subject: "[themairlab.com] " + d.topic + ": " + d.name,
-          from_name: "themairlab.com contact form",
+          subject: "MAIR Lab website – " + d.topic + " – " + d.name,
+          from_name: "MAIR Lab website",
           replyto: d.email,
-          name: d.name, email: d.email, organization: d.organization || "", topic: d.topic, message: d.message,
-          page: location.href
+          name: d.name, email: d.email, organization: d.organization || "", topic: d.topic, message: d.message
         })
       }).then(function (r) { return r.json(); }).then(function (res) {
         if (!res.success) throw new Error(res.message || "failed");
