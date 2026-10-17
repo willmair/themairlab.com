@@ -44,7 +44,12 @@ HEAD = """<!doctype html>
 <meta name="theme-color" content="#0B1218">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta property="og:image" content="https://themairlab.com/assets/img/brand/og-image.png">
+<meta property="og:image" content="https://themairlab.com/assets/img/brand/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MAIR Lab, Metabolism and Aging Integrative Research, Harvard T.H. Chan School of Public Health">
+<meta property="og:site_name" content="MAIR Lab">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
