@@ -58,6 +58,7 @@ HEAD = """<!doctype html>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg></button>
     <nav class="nav" aria-label="Main">
 {nav}
+      <a class="nav-cta nav-support{support_current}" href="support.html">Support us</a>
       <a class="nav-cta" href="join.html">Join us</a>
     </nav>
   </div>
@@ -91,7 +92,7 @@ FOOT = """</main>
           <li><a href="publications.html">Publications</a></li>
           <li><a href="news.html">News &amp; media</a></li>
           <li><a href="join.html">Join the lab</a></li>
-          <li><a href="index.html#support">Support the lab</a></li>
+          <li><a href="support.html">Support the lab</a></li>
         </ul>
       </div>
       <div>
@@ -133,7 +134,8 @@ def build():
         full_title = title if title.startswith("MAIR Lab") else f"{title} · MAIR Lab"
         url = SITE + "/" + ("" if name == "index.html" else name)
         out = HEAD.format(title=full_title, description=meta.get("description", ""), url=url,
-                          theme=meta.get("theme", "light"), src=name, logo=LOGO, nav=nav, v=V)
+                          theme=meta.get("theme", "light"), src=name, logo=LOGO, nav=nav, v=V,
+                          support_current='" aria-current="page' if name == "support.html" else "")
         out += body.rstrip() + "\n" + FOOT.format(logo=LOGO, scripts=scripts, v=V)
         (ROOT / name).write_text(out)
         print("built", name)
