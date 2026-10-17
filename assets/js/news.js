@@ -41,7 +41,7 @@ window.NEWS = [
     title: "The science of actually reversing your biological age",
     url: "https://open.spotify.com/episode/0iE3jzQ0g9c5aYEjFYj8wY",
     featured: true,
-    blurb: "An in-depth conversation with Chris Wharton on the real science of aging: why age is the biggest risk factor for chronic disease, and what the evidence says about diet, exercise, sleep and emerging interventions.",
+    blurb: "An in-depth conversation between William Mair and Chris Wharton on the real science of aging: why age is the biggest risk factor for chronic disease, and what the evidence says about diet, exercise, sleep and emerging interventions.",
     links: { spotify: "https://open.spotify.com/episode/0iE3jzQ0g9c5aYEjFYj8wY",
              apple: "https://podcasts.apple.com/us/podcast/can-you-actually-reverse-aging-what-the-science/id1889622370?i=1000758507602",
              youtube: "https://www.youtube.com/watch?v=0OA-E6jIS6o" } },
