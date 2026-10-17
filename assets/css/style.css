@@ -565,3 +565,5 @@ a.news-title:hover { color: var(--accent); }
 .featured-listen .listen:hover { border-color: #fff; color: #fff; background: rgba(255,255,255,.12); }
 .fl-wave { width: 100%; height: auto; opacity: .9; }
 @media (max-width: 859px) { .fl-wave { max-height: 90px; } }
+
+.research-body p.note { font-size: .92rem; color: var(--muted); border-left: 2px solid var(--line); padding-left: 14px; }
