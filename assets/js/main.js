@@ -210,9 +210,9 @@
 
   /* ---- Contact form ----------------------------------------------------
      Messages are delivered by Web3Forms (https://web3forms.com) to Will's
-     inbox. Paste the access key it emails you below. Every message arrives
+     inbox. Access key for the Web3Forms form (delivers to Will's Gmail). Every message arrives
      with a subject starting "[themairlab.com]".                              */
-  var CONTACT_FORM_KEY = "";
+  var CONTACT_FORM_KEY = "fe2d9e97-2d71-44a4-8501-87e318278dcf";
 
   var form = document.getElementById("contact-form");
   if (form) {
