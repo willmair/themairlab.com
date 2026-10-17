@@ -1,5 +1,5 @@
 # Brand working files live in OneDrive (MAIR Lab Brand), not on the public site
-brand/
+/brand/
 # Local tooling
 .claude/
 __pycache__/

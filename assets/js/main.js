@@ -332,7 +332,7 @@
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       var narrow = W < 760;
       geo = narrow
-        ? { x0: W * 0.04, x1: W * 1.02, cy: H * 0.21, a0: H * 0.105, cycles: 6 }
+        ? { x0: W * 0.04, x1: W * 1.02, cy: H * 0.175, a0: H * 0.085, cycles: 6 }
         : { x0: W * 0.36, x1: W * 1.02, cy: H * 0.40, a0: H * 0.27, cycles: 7.5 };
       grad = ctx.createLinearGradient(geo.x0, 0, geo.x1, 0);
       STOPS.forEach(function (c, i) { grad.addColorStop(i / (STOPS.length - 1), c); });
