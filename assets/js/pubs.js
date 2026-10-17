@@ -186,7 +186,7 @@ window.PUBS = [
   "journal": "Commun Biol",
   "doi": "10.1038/s42003-024-07243-w",
   "kind": "article",
-  "featured": false
+  "featured": true
  },
  {
   "pmid": "39260886",
@@ -300,7 +300,7 @@ window.PUBS = [
   "journal": "PLoS Genet",
   "doi": "10.1371/journal.pgen.1010938",
   "kind": "article",
-  "featured": false
+  "featured": true
  },
  {
   "pmid": "37946042",
@@ -323,7 +323,7 @@ window.PUBS = [
   "journal": "Nat Aging",
   "doi": "10.1038/s43587-023-00517-8",
   "kind": "article",
-  "featured": false
+  "featured": true
  },
  {
   "pmid": "35181679",
@@ -426,7 +426,7 @@ window.PUBS = [
   "journal": "Cell Rep",
   "doi": "10.1016/j.celrep.2020.108125",
   "kind": "article",
-  "featured": false
+  "featured": true
  },
  {
   "pmid": "32969593",
@@ -543,7 +543,7 @@ window.PUBS = [
   "journal": "Elife",
   "doi": "10.7554/eLife.49158",
   "kind": "article",
-  "featured": false
+  "featured": true
  },
  {
   "pmid": "31064766",

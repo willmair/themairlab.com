@@ -22,7 +22,7 @@ EXCLUDE = {
     "26877193",  # FLEXITau, Anal Chem 2016 (Steen lab)
     "27594585",  # Tau-A152T iPSC neurons, Stem Cell Reports 2016 (Haggarty lab)
 }
-FEATURED = ["42162381", "41270125", "29107506", "27919065", "25723162", "21331044"]
+FEATURED = ["42162381", "41270125", "29107506", "27919065", "25723162", "21331044", "31411562", "32905769", "37946042", "37721956", "39572679"]
 OUT = pathlib.Path(__file__).resolve().parent.parent / "assets" / "js" / "pubs.js"
 PENDING = pathlib.Path(__file__).resolve().parent / "pending_pubs.json"
 DEFAULT_CV = pathlib.Path.home() / "Library/CloudStorage/OneDrive-HarvardUniversity/CV/Mair_CV_2026.docx"
