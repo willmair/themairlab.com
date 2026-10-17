@@ -1,0 +1,64 @@
+<!--
+title: Contact
+description: Get in touch with the MAIR Lab at the Harvard T.H. Chan School of Public Health about joining the lab, media, collaborations or supporting our research.
+theme: light
+-->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h1 class="display">Get in <em>touch.</em></h1>
+    <p class="lede">Whether you’re interested in joining the lab, writing about our work, collaborating or supporting our research, send a message and it will come straight to Will.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap contact">
+    <form class="contact-form" id="contact-form" novalidate>
+      <div class="field">
+        <label for="cf-topic">What’s this about?</label>
+        <select id="cf-topic" name="topic" required>
+          <option value="General enquiry">General enquiry</option>
+          <option value="Postdoc position">Postdoc position</option>
+          <option value="Graduate rotation / PhD">Graduate rotation / PhD</option>
+          <option value="Research assistant or student project">Research assistant or student project</option>
+          <option value="Media enquiry">Media enquiry</option>
+          <option value="Collaboration">Collaboration</option>
+          <option value="Supporting the lab">Supporting the lab</option>
+          <option value="Speaking invitation">Speaking invitation</option>
+        </select>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="cf-name">Your name</label>
+          <input id="cf-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="cf-email">Your email</label>
+          <input id="cf-email" name="email" type="email" autocomplete="email" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="cf-org">Institution or organization <span>(optional)</span></label>
+        <input id="cf-org" name="organization" type="text" autocomplete="organization">
+      </div>
+      <div class="field">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" rows="7" required></textarea>
+        <p class="hint" id="cf-hint"></p>
+      </div>
+      <!-- spam trap: real visitors never see or fill this -->
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-solid" type="submit">Send message <span class="arrow">→</span></button>
+      <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <aside class="contact-aside">
+      <div class="eyebrow">Visit</div>
+      <p>MAIR Lab<br>Department of Molecular Metabolism<br>Harvard T.H. Chan School of Public Health<br>665 Huntington Avenue, Building 1, Room 509<br>Boston, MA 02115</p>
+      <div class="eyebrow" style="margin-top:32px">Elsewhere</div>
+      <p><a href="https://willmair.com" target="_blank" rel="noopener">willmair.com</a><br>
+         <a href="https://www.linkedin.com/in/willmair/" target="_blank" rel="noopener">LinkedIn</a><br>
+         <a href="https://hsph.harvard.edu/research/healthy-aging/" target="_blank" rel="noopener">Healthy Aging Initiative</a></p>
+    </aside>
+  </div>
+</section>
