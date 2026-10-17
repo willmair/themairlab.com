@@ -182,13 +182,29 @@
     var p = String(d).split("-");
     return p[1] ? MONTHS[+p[1] - 1] + " " + p[0] : p[0];
   }
+  var PLATFORMS = { spotify: "Spotify", apple: "Apple Podcasts", youtube: "YouTube" };
   function newsHTML(n) {
     var ext = /^https?:/.test(n.url);
-    return '<a class="news-item reveal in" href="' + esc(n.url) + '"' + (ext ? ' target="_blank" rel="noopener"' : "") + ">" +
-      '<div class="news-meta"><span class="news-type">' + esc(n.type) + "</span><span>" + esc(fmtDate(n.date)) + "</span></div>" +
-      '<div class="news-title">' + esc(n.title) + "</div>" +
-      (n.blurb ? '<p class="news-blurb">' + esc(n.blurb) + "</p>" : "") +
+    var meta = '<div class="news-meta"><span class="news-type">' + esc(n.type) + "</span><span>" + esc(fmtDate(n.date)) + "</span></div>";
+    var body = (n.blurb ? '<p class="news-blurb">' + esc(n.blurb) + "</p>" : "");
+    if (n.links) {
+      var btns = Object.keys(PLATFORMS).filter(function (k) { return n.links[k]; }).map(function (k) {
+        return '<a class="listen listen-' + k + '" href="' + esc(n.links[k]) + '" target="_blank" rel="noopener">' + PLATFORMS[k] + "</a>";
+      }).join("");
+      return '<div class="news-item reveal in">' + meta +
+        '<a class="news-title" href="' + esc(n.url) + '" target="_blank" rel="noopener">' + esc(n.title) + "</a>" + body +
+        '<div class="news-source">' + esc(n.source) + "</div>" +
+        '<div class="listen-row"><span>Listen on</span>' + btns + "</div></div>";
+    }
+    return '<a class="news-item reveal in" href="' + esc(n.url) + '"' + (ext ? ' target="_blank" rel="noopener"' : "") + ">" + meta +
+      '<div class="news-title">' + esc(n.title) + "</div>" + body +
       '<div class="news-source">' + esc(n.source) + ' <span class="arrow">↗</span></div></a>';
+  }
+  if (window.NEWS) {
+    // newest first; a bare year ("2026") sorts after dated items from that year
+    var key = function (n) { var p = String(n.date).split("-"); return (+p[0]) * 100 + (p[1] ? +p[1] : 0); };
+    window.NEWS = window.NEWS.map(function (n, i) { return [n, i]; })
+      .sort(function (a, b) { return key(b[0]) - key(a[0]) || a[1] - b[1]; }).map(function (x) { return x[0]; });
   }
   var newsLatest = document.getElementById("news-latest");
   if (newsLatest && window.NEWS) newsLatest.innerHTML = window.NEWS.slice(0, 3).map(newsHTML).join("");

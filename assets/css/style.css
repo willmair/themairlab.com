@@ -539,3 +539,16 @@ h1, h2, h3 { margin: 0; font-weight: 400; letter-spacing: -0.015em; }
 .nav a { white-space: nowrap; }
 @media (max-width: 1320px) and (min-width: 861px) { .site-header .brand-full { display: none; } .nav { gap: 2px; } .nav a { padding: 8px 10px; } }
 @media (max-width: 1440px) { .site-header .brand-full { display: none; } }
+
+/* Podcast "Listen on" buttons */
+div.news-item:hover { transform: none; border-color: var(--line); }
+a.news-title { text-decoration: none; color: inherit; }
+a.news-title:hover { color: var(--accent); }
+.news-item .news-source { margin-top: auto; }
+.listen-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding-top: 4px; }
+.listen-row > span { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
+.listen { font-size: .78rem; font-weight: 600; text-decoration: none; padding: 6px 11px; border-radius: 999px; border: 1px solid var(--line); color: var(--ink); background: var(--paper); transition: border-color .2s, color .2s; }
+.listen:hover { border-color: currentColor; }
+.listen-spotify:hover { color: #1a9e4b; }
+.listen-apple:hover { color: #8e44d6; }
+.listen-youtube:hover { color: #d4202a; }

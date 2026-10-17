@@ -5,6 +5,7 @@
      source — outlet name
      title, url
      blurb  — optional one or two sentences
+     links  — optional, for podcasts/talks: { spotify, apple, youtube } (shown as "Listen on" buttons)
    ========================================================================== */
 
 window.NEWS = [
@@ -18,6 +19,9 @@ window.NEWS = [
   { date: "2026-04", type: "Podcast", source: "Harvard Thinking",
     title: "How super-agers keep their brains young",
     url: "https://open.spotify.com/episode/5g9Zr6HP28F4OfTPTCabWU",
+    links: { spotify: "https://open.spotify.com/episode/5g9Zr6HP28F4OfTPTCabWU",
+             apple: "https://podcasts.apple.com/us/podcast/secrets-of-super-agers/id1727411132?i=1000761637796",
+             youtube: "https://www.youtube.com/watch?v=P7-nshMUJms" },
     blurb: "With Alexandra Touroutoglou and Suzanne Salamon on what super-agers teach us about resilience." },
   { date: "2026", type: "Lab news", source: "Nature Aging",
     title: "Peroxisomes orchestrate metabolic flexibility and longevity",
@@ -27,12 +31,17 @@ window.NEWS = [
     title: "Early life sets how well longevity interventions work",
     url: "https://doi.org/10.1371/journal.pbio.3003504",
     blurb: "Sneha Dutta, Maria Perez Matos and colleagues show that early-life RNA splicing activity determines how well longevity interventions work." },
-  { date: "2025", type: "Podcast", source: "The LIVING Room Podcast",
+  { date: "2026-07", type: "Podcast", source: "The LIVING Room Podcast",
     title: "Why staying healthy matters more than living longer",
-    url: "https://youtu.be/Qhn7X4RrTI8" },
-  { date: "2025", type: "Podcast", source: "The LIVING Room Podcast",
+    url: "https://youtu.be/Qhn7X4RrTI8",
+    links: { apple: "https://podcasts.apple.com/us/podcast/healthspan-not-lifespan-harvard-researchers-on-why/id1889622370?i=1000776931472",
+             youtube: "https://www.youtube.com/watch?v=Qhn7X4RrTI8" } },
+  { date: "2026-03", type: "Podcast", source: "The LIVING Room Podcast",
     title: "The science of actually reversing your biological age",
-    url: "https://open.spotify.com/episode/0iE3jzQ0g9c5aYEjFYj8wY" },
+    url: "https://open.spotify.com/episode/0iE3jzQ0g9c5aYEjFYj8wY",
+    links: { spotify: "https://open.spotify.com/episode/0iE3jzQ0g9c5aYEjFYj8wY",
+             apple: "https://podcasts.apple.com/us/podcast/can-you-actually-reverse-aging-what-the-science/id1889622370?i=1000758507602",
+             youtube: "https://www.youtube.com/watch?v=0OA-E6jIS6o" } },
   { date: "2025-05", type: "Press", source: "The New York Times",
     title: "What your face reveals about your biological age",
     url: "https://www.nytimes.com/2025/05/08/well/biological-age-faceage.html" },
@@ -51,6 +60,11 @@ window.NEWS = [
   { date: "2019", type: "Essay", source: "The Washington Post",
     title: "Five myths about aging",
     url: "https://www.washingtonpost.com/outlook/five-myths/five-myths-about-aging/2019/09/20/e7bfa11a-daf9-11e9-bfb1-849887369476_story.html" },
+  { date: "2018-03", type: "Podcast", source: "Harvard Chan School: This Week in Health",
+    title: "The plasticity of the aging process",
+    url: "https://open.spotify.com/episode/1Mv4HAdfsEKqrGh4I3RaeE",
+    links: { spotify: "https://open.spotify.com/episode/1Mv4HAdfsEKqrGh4I3RaeE",
+             apple: "https://podcasts.apple.com/us/podcast/the-plasticity-of-the-aging-process/id1099971827?i=1000407760558" } },
   { date: "2017-11", type: "Press", source: "Harvard Gazette",
     title: "Intermittent fasting may be center of increasing lifespan",
     url: "https://news.harvard.edu/gazette/story/2017/11/intermittent-fasting-may-be-center-of-increasing-lifespan/" },
