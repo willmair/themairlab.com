@@ -59,12 +59,12 @@ CVN = cv_text()
 pubs, pending = [], []
 for pmid in summary["uids"]:
     r = summary[pmid]
-    if pmid in EXCLUDE or {"Erratum", "Published Erratum", "Comment"} & set(r.get("pubtype", [])):
+    if pmid in EXCLUDE or {"Erratum", "Published Erratum"} & set(r.get("pubtype", [])):  # commentaries are kept (they are in the CV)
         continue
     doi = next((a["value"] for a in r.get("articleids", []) if a["idtype"] == "doi"), "")
     types = r.get("pubtype", [])
     kind = "preprint" if r["source"] in ("bioRxiv", "medRxiv") or "Preprint" in types else (
-        "review" if "Review" in types else "article")
+        "review" if "Review" in types else "commentary" if {"Comment", "Editorial"} & set(types) else "article")
     entry = {
         "pmid": pmid,
         "year": int(r["pubdate"][:4]),

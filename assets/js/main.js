@@ -64,6 +64,7 @@
   function tag(p) {
     if (p.kind === "preprint") return '<span class="tag preprint">Preprint</span>';
     if (p.kind === "review") return '<span class="tag">Review</span>';
+    if (p.kind === "commentary") return '<span class="tag">Commentary</span>';
     return "";
   }
   function paperHTML(p, withYear) {
@@ -206,13 +207,32 @@
     window.NEWS = window.NEWS.map(function (n, i) { return [n, i]; })
       .sort(function (a, b) { return key(b[0]) - key(a[0]) || a[1] - b[1]; }).map(function (x) { return x[0]; });
   }
+  function listenButtons(n) {
+    return Object.keys(PLATFORMS).filter(function (k) { return n.links && n.links[k]; }).map(function (k) {
+      return '<a class="listen listen-' + k + '" href="' + esc(n.links[k]) + '" target="_blank" rel="noopener">' + PLATFORMS[k] + "</a>";
+    }).join("");
+  }
+  function featuredHTML(n) {
+    return '<div class="featured-listen reveal in"><div class="fl-text"><div class="eyebrow">Featured listen · ' + esc(n.source) + " · " + esc(fmtDate(n.date)) + "</div>" +
+      '<h3 class="fl-title">' + esc(n.title) + "</h3>" + (n.blurb ? "<p>" + esc(n.blurb) + "</p>" : "") +
+      '<div class="listen-row"><span>Listen on</span>' + listenButtons(n) + "</div></div>" +
+      '<svg class="fl-wave" viewBox="0 0 400 160" aria-hidden="true"><defs><linearGradient id="flg" x1="0" x2="1"><stop offset="0" stop-color="#7FE3C6"/><stop offset=".45" stop-color="#6E8DF0"/><stop offset=".7" stop-color="#A27DF0"/><stop offset="1" stop-color="#EBA43C"/></linearGradient></defs>' +
+      '<path d="' + (function () { var d = "", n2 = 220; for (var i = 0; i <= n2; i++) { var t = i / n2; d += (i ? " L" : "M") + (10 + 380 * t).toFixed(1) + " " + (80 - 62 * Math.exp(-1.9 * t) * Math.cos(2 * Math.PI * 5 * t)).toFixed(1); } return d; })() +
+      '" fill="none" stroke="url(#flg)" stroke-width="4" stroke-linecap="round"/></svg></div>';
+  }
+  var featuredNews = window.NEWS ? window.NEWS.filter(function (n) { return n.featured; })[0] : null;
+  var flHome = document.getElementById("featured-listen");
+  if (flHome && featuredNews) flHome.innerHTML = featuredHTML(featuredNews);
+  var flNews = document.getElementById("news-featured");
+  if (flNews && featuredNews) flNews.innerHTML = featuredHTML(featuredNews);
   var newsLatest = document.getElementById("news-latest");
-  if (newsLatest && window.NEWS) newsLatest.innerHTML = window.NEWS.slice(0, 3).map(newsHTML).join("");
+  if (newsLatest && window.NEWS) newsLatest.innerHTML = window.NEWS.filter(function (n) { return !n.featured; }).slice(0, 3).map(newsHTML).join("");
   var newsAll = document.getElementById("news-all");
   if (newsAll && window.NEWS) {
     var newsChips = document.querySelectorAll("[data-news-filter]");
     function renderNews(type) {
-      newsAll.innerHTML = window.NEWS.filter(function (n) { return type === "all" || n.type === type; }).map(newsHTML).join("");
+      if (flNews) flNews.style.display = (type === "all" || type === "Podcast") ? "" : "none";
+      newsAll.innerHTML = window.NEWS.filter(function (n) { return !(n.featured && flNews) && (type === "all" || n.type === type); }).map(newsHTML).join("");
     }
     newsChips.forEach(function (c) {
       c.addEventListener("click", function () {

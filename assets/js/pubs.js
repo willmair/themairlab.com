@@ -10,7 +10,7 @@ window.PUBS = [
   ],
   "journal": "PLoS Biol",
   "doi": "10.1371/journal.pbio.3003835",
-  "kind": "article",
+  "kind": "commentary",
   "featured": false
  },
  {
@@ -485,6 +485,19 @@ window.PUBS = [
   "featured": false
  },
  {
+  "pmid": "32644994",
+  "year": 2020,
+  "title": "Predicting longevity responses to dietary restriction: A stepping stone toward precision geroscience",
+  "authors": [
+   "Perez-Matos MC",
+   "Mair WB"
+  ],
+  "journal": "PLoS Genet",
+  "doi": "10.1371/journal.pgen.1008833",
+  "kind": "commentary",
+  "featured": false
+ },
+ {
   "pmid": "32835153",
   "year": 2020,
   "title": "Remote but not isolated",
@@ -838,6 +851,30 @@ window.PUBS = [
   "featured": false
  },
  {
+  "pmid": "23312278",
+  "year": 2013,
+  "title": "Tipping the energy balance toward longevity",
+  "authors": [
+   "Mair W"
+  ],
+  "journal": "Cell Metab",
+  "doi": "10.1016/j.cmet.2012.11.011",
+  "kind": "commentary",
+  "featured": false
+ },
+ {
+  "pmid": "21346808",
+  "year": 2011,
+  "title": "Doubling the dose",
+  "authors": [
+   "Mair W"
+  ],
+  "journal": "PLoS Biol",
+  "doi": "10.1371/journal.pbio.1001017",
+  "kind": "commentary",
+  "featured": false
+ },
+ {
   "pmid": "21331044",
   "year": 2011,
   "title": "Lifespan extension induced by AMPK and calcineurin is mediated by CRTC-1 and CREB",
@@ -884,6 +921,20 @@ window.PUBS = [
   "featured": false
  },
  {
+  "pmid": "21925309",
+  "year": 2011,
+  "title": "SIP-ing the elixir of youth",
+  "authors": [
+   "Mair W",
+   "Steffen KK",
+   "Dillin A"
+  ],
+  "journal": "Cell",
+  "doi": "10.1016/j.cell.2011.08.026",
+  "kind": "commentary",
+  "featured": false
+ },
+ {
   "pmid": "20144761",
   "year": 2010,
   "title": "Chromatin-bound nuclear pore components regulate gene expression in higher eukaryotes",
@@ -916,6 +967,30 @@ window.PUBS = [
   "featured": false
  },
  {
+  "pmid": "20644641",
+  "year": 2010,
+  "title": "How normal cells can win the battle for survival against cancer cells",
+  "authors": [
+   "Mair W"
+  ],
+  "journal": "PLoS Biol",
+  "doi": "10.1371/journal.pbio.1000423",
+  "kind": "commentary",
+  "featured": false
+ },
+ {
+  "pmid": "20351768",
+  "year": 2010,
+  "title": "Reinforcing reinforcement",
+  "authors": [
+   "Mair W"
+  ],
+  "journal": "PLoS Biol",
+  "doi": "10.1371/journal.pbio.1000340",
+  "kind": "commentary",
+  "featured": false
+ },
+ {
   "pmid": "19229346",
   "year": 2009,
   "title": "Optimizing dietary restriction for genetic epistasis analysis and gene discovery in C. elegans",
@@ -941,6 +1016,20 @@ window.PUBS = [
   "journal": "Annu Rev Biochem",
   "doi": "10.1146/annurev.biochem.77.061206.171059",
   "kind": "review",
+  "featured": false
+ },
+ {
+  "pmid": "17317064",
+  "year": 2007,
+  "title": "Comment by Matthew Piper, William Mair, Linda Partridge on Min, K.J., Flatt, T., Kulaots, I., Tatar, M. (2006) \"Counting calories in Drosophila dietary restriction\"Exp. Gerontology, doi:10.1016/j.exger.2006.10.009",
+  "authors": [
+   "Piper M",
+   "Mair W",
+   "Partridge L"
+  ],
+  "journal": "Exp Gerontol",
+  "doi": "10.1016/j.exger.2007.01.002",
+  "kind": "commentary",
   "featured": false
  },
  {
