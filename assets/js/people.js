@@ -7,7 +7,12 @@
      role   — e.g. "Postdoctoral Fellow", "Graduate Student"
      since  — year joined
      focus  — optional one-line research focus or fellowship
-     photo  — optional, e.g. "assets/img/people/jane-doe.jpg" (square, ~800px)
+     photo  — optional, e.g. "assets/img/people/jane-doe.jpg" (4:5 portrait on the
+              shared background: see scripts/portraits/README.md)
+     slug   — optional; links the card to people/<slug>.html (page source in
+              pages/people/<slug>.html, other papers in scripts/update_people_pubs.py)
+     pubmed — optional, their author name as in pubs.js (e.g. "Kraft JD"), so
+              their lab papers list on their page automatically
      links  — optional { orcid, scholar, x, bluesky, linkedin, web }
    alumni: former members. Move someone here when they leave, and add
      group  — "postdoc" | "phd" | "staff" | "student" (visiting, post-bac, undergraduate)
@@ -17,15 +22,21 @@
 
 window.PEOPLE = {
   current: [
-    { name: "Anne Lanjuin", role: "Senior Research Scientist", since: "2015" },
+    { name: "Anne Lanjuin", role: "Senior Research Scientist", since: "2015",
+      slug: "anne-lanjuin", photo: "assets/img/people/anne-lanjuin.jpg", pubmed: "Lanjuin A" },
     { name: "Aditi Prabhakar", role: "Postdoctoral Fellow", since: "2021",
-      focus: "Moore Foundation Fellow" },
+      focus: "Moore Foundation Fellow",
+      slug: "aditi-prabhakar", photo: "assets/img/people/aditi-prabhakar.jpg", pubmed: "Prabhakar A" },
     { name: "Christopher Morrow", role: "Postdoctoral Fellow", since: "2021",
-      focus: "NIA F32 and K99/R00 awardee" },
+      focus: "NIA F32 and K99/R00 awardee",
+      slug: "christopher-morrow", photo: "assets/img/people/christopher-morrow.jpg", pubmed: "Morrow CS" },
     { name: "Jamie Kraft", role: "Postdoctoral Fellow", since: "2025",
-      focus: "Swedish Research Council Fellow" },
-    { name: "Emily Levesque", role: "Research Assistant", since: "2026" },
-    { name: "Kate Roh", role: "Research Assistant", since: "2026" }
+      focus: "Swedish Research Council Fellow",
+      slug: "jamie-kraft", photo: "assets/img/people/jamie-kraft.jpg", pubmed: "Kraft JD" },
+    { name: "Emily Levesque", role: "Research Assistant", since: "2026",
+      slug: "emily-levesque", photo: "assets/img/people/emily-levesque.jpg" },
+    { name: "Kate Roh", role: "Research Assistant", since: "2026",
+      slug: "kate-roh", photo: "assets/img/people/kate-roh.jpg" }
   ],
 
   alumni: [

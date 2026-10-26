@@ -1,0 +1,113 @@
+"""Refresh assets/js/people_pubs.js: each lab member's own PubMed record, for their profile page.
+
+Usage:  python3 scripts/update_people_pubs.py
+
+Lab papers are not listed here: profile pages take them from assets/js/pubs.js
+(CV-gated, by the member's PubMed author name in people.js), so they appear as
+soon as update_pubs.py adds them. This script adds each member's other papers
+(earlier training, collaborations).
+
+Name searches pick up other people with the same name, so a paper is only shown
+once its PMID is in that member's CONFIRMED set. New hits go to
+scripts/pending_people_pubs.json for review in the weekly briefing: add the PMID
+to CONFIRMED if it is theirs, or to EXCLUDE if it is someone else's.
+"""
+import json, pathlib, time, urllib.parse, urllib.request
+
+EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+OUT = ROOT / "assets" / "js" / "people_pubs.js"
+PENDING = ROOT / "scripts" / "pending_people_pubs.json"
+LAB = ROOT / "assets" / "js" / "pubs.js"
+
+# slug (matches people.js and pages/people/<slug>.html): PubMed query, confirmed PMIDs, excluded PMIDs
+MEMBERS = {
+    "anne-lanjuin": {
+        "query": '"Lanjuin, Anne"[FAU] OR 0000-0003-2532-0863[auid]',
+        # Brandeis (C. elegans sensory neurons) and Harvard MCB
+        "confirmed": {"11832225", "14536063", "15018934", "16376329", "17510633", "23685720", "29231812"},
+        "exclude": set(),
+    },
+    "aditi-prabhakar": {
+        "query": '"Prabhakar, Aditi"[FAU] OR 0000-0002-6024-4600[auid]',
+        # University at Buffalo (Cullen lab, yeast MAPK signaling)
+        "confirmed": {"27001830", "30096860", "30842272", "31452924", "31710471", "32079658", "34347092",
+                      "36909494", "37774975"},
+        "exclude": {"34916515"},  # author correction
+    },
+    "christopher-morrow": {
+        "query": '"Morrow, Christopher S"[FAU] OR "Morrow, Christopher"[FAU]',
+        # University of Wisconsin-Madison (Moore lab, neural stem cells)
+        "confirmed": {"30849364", "32109376", "33190414", "34430917", "34714522", "36056070", "37292613",
+                      "38521057", "38682901", "40684436"},
+        # other Christopher Morrows (AstraZeneca oncology, Johns Hopkins psychiatry, Curtin, pediatrics)
+        "exclude": {"22006676", "23416181", "27490725", "27986707", "30424958", "34866317", "38470011",
+                    "38835997", "39838223", "40453827", "40554402", "41186491", "41985110", "42442380",
+                    "42724567"},
+    },
+    "jamie-kraft": {
+        "query": '"Kraft, Jamie D"[FAU] OR "Kraft, Jamie"[FAU] OR 0000-0001-6336-9997[auid]',
+        # University of Gothenburg (Wallenberg Laboratory)
+        "confirmed": {"33801198", "33803130", "34022871", "34204944", "35104001", "35789845", "37532933",
+                      "37658064"},
+        "exclude": set(),
+    },
+    "emily-levesque": {"query": '"Levesque, Emily"[FAU]', "confirmed": set(), "exclude": set()},
+    "kate-roh": {"query": '"Roh, Younjoo"[FAU] OR "Roh, Kate"[FAU]', "confirmed": set(), "exclude": set()},
+}
+
+
+def get(endpoint, **params):
+    url = EUTILS + endpoint + "?" + urllib.parse.urlencode(dict(params, db="pubmed", retmode="json"))
+    with urllib.request.urlopen(url, timeout=60) as r:
+        out = json.load(r)
+    time.sleep(0.4)  # NCBI asks for at most 3 requests a second without an API key
+    return out
+
+
+def entry(pmid, r):
+    types = r.get("pubtype", [])
+    doi = next((a["value"] for a in r.get("articleids", []) if a["idtype"] == "doi"), "")
+    return {
+        "pmid": pmid,
+        "year": int(r["pubdate"][:4]),
+        "title": r["title"].rstrip("."),
+        "authors": [a["name"] for a in r["authors"]],
+        "journal": r["source"],
+        "doi": doi,
+        "kind": "preprint" if r["source"] in ("bioRxiv", "medRxiv") or "Preprint" in types else (
+            "review" if "Review" in types else "commentary" if {"Comment", "Editorial"} & set(types) else "article"),
+    }
+
+
+lab_text = LAB.read_text()
+lab_ids = {p["pmid"] for p in json.loads(lab_text[lab_text.index("["):lab_text.rindex("]") + 1])}
+
+shown, pending = {}, []
+for slug, m in MEMBERS.items():
+    ids = get("esearch.fcgi", term=m["query"], retmax=500)["esearchresult"]["idlist"]
+    ids = [i for i in ids if i not in lab_ids and i not in m["exclude"]]
+    shown[slug] = []
+    if not ids:
+        continue
+    summary = get("esummary.fcgi", id=",".join(ids))["result"]
+    for pmid in summary["uids"]:
+        r = summary[pmid]
+        if {"Erratum", "Published Erratum"} & set(r.get("pubtype", [])):
+            continue
+        e = entry(pmid, r)
+        if pmid in m["confirmed"]:
+            shown[slug].append(e)
+        elif not any(a.startswith("Mair W") for a in e["authors"]):  # lab papers not in the CV are update_pubs.py's job
+            pending.append(dict(e, member=slug))
+    shown[slug].sort(key=lambda p: (-p["year"], p["title"]))
+
+OUT.write_text("// Generated by scripts/update_people_pubs.py — do not edit by hand.\n"
+               "// Each member's papers from outside the lab; lab papers come from pubs.js.\n"
+               "window.PEOPLE_PUBS = " + json.dumps(shown, ensure_ascii=False, indent=1) + ";\n")
+PENDING.write_text(json.dumps(pending, ensure_ascii=False, indent=1) + "\n")
+for slug, papers in shown.items():
+    print(f"{slug}: {len(papers)} paper(s) from outside the lab")
+print(f"{len(pending)} unconfirmed PubMed record(s) -> {PENDING.name} for review")
+for p in pending:
+    print(f"  PENDING {p['member']} {p['pmid']} {p['year']} {p['journal']}: {p['title'][:80]} ({', '.join(p['authors'][:4])} ...)")

@@ -265,8 +265,19 @@ h1, h2, h3 { margin: 0; font-weight: 400; letter-spacing: -0.015em; }
 .team { display: grid; gap: 28px 22px; grid-template-columns: repeat(2, 1fr); }
 @media (min-width: 720px) { .team { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 1040px) { .team { grid-template-columns: repeat(4, 1fr); } }
-.member .portrait { aspect-ratio: 1; margin-bottom: 14px; }
-.member-name { font-weight: 600; letter-spacing: -.01em; }
+.member .portrait { margin-bottom: 14px; background: #e6e1d8; }
+.member .portrait img { transition: transform .5s ease; }
+.member a:hover .portrait img { transform: scale(1.03); }
+.member-name { display: block; font-weight: 600; letter-spacing: -.01em; text-decoration: none; }
+a.member-name:hover { color: var(--accent); }
+
+/* Member profile pages */
+.person .back { display: inline-block; margin-bottom: 36px; }
+.person .pi { align-items: start; }
+@media (min-width: 900px) { .person .pi { grid-template-columns: 4fr 8fr; } }
+.person .portrait { max-width: 420px; background: #e6e1d8; }
+.person .pi-body h1 { margin: 14px 0 6px; }
+.person-pubs-note { font-size: .88rem; color: var(--muted); margin: 14px 0 0; }
 .member-role { font-size: .88rem; color: var(--muted); }
 .member-focus { font-size: .88rem; color: var(--ink-2); margin-top: 6px; }
 .placeholder { outline: 1.5px dashed #c9c5ba; outline-offset: -1.5px; background: #f1efe9; color: var(--muted); }

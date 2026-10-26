@@ -45,9 +45,9 @@
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
     });
   }
-  function authorList(a, max) {
+  function authorList(a, max, also) {
     var html = a.map(function (n) {
-      return /^Mair W/.test(n) ? "<b>" + esc(n) + "</b>" : esc(n);
+      return /^Mair W/.test(n) || n === also ? "<b>" + esc(n) + "</b>" : esc(n);
     });
     if (max && html.length > max) {
       var mairIdx = a.findIndex(function (n) { return /^Mair W/.test(n); });
@@ -67,11 +67,11 @@
     if (p.kind === "commentary") return '<span class="tag">Commentary</span>';
     return "";
   }
-  function paperHTML(p, withYear) {
+  function paperHTML(p, withYear, also) {
     return '<a class="paper" href="' + link(p) + '" target="_blank" rel="noopener">' +
       (withYear ? '<div class="paper-year">' + p.year + "</div>" : "") +
       '<div><div class="paper-title">' + esc(p.title) + tag(p) + "</div>" +
-      '<div class="paper-authors">' + authorList(p.authors, 8) + "</div></div>" +
+      '<div class="paper-authors">' + authorList(p.authors, also ? 0 : 8, also) + "</div></div>" +
       '<div class="paper-journal">' + esc(p.journal) + "</div></a>";
   }
 
@@ -130,6 +130,31 @@
     render();
   }
 
+  /* Member profile page: their lab papers (pubs.js) plus papers from before or outside the lab (people_pubs.js) */
+  var mine = document.getElementById("person-pubs");
+  if (mine && window.PUBS) {
+    var who = mine.dataset.pubmed;
+    var lab = who ? window.PUBS.filter(function (p) { return p.authors.indexOf(who) !== -1; }) : [];
+    var other = (window.PEOPLE_PUBS || {})[mine.dataset.slug] || [];
+    var all = lab.concat(other.filter(function (o) {
+      return !lab.some(function (p) { return p.pmid === o.pmid; });
+    })).sort(function (a, b) { return b.year - a.year || a.title.localeCompare(b.title); });
+    if (!all.length) {
+      mine.innerHTML = '<div class="empty">No publications yet. Papers appear here automatically once they are indexed in PubMed.</div>';
+    } else {
+      var html = "", yr = null;
+      all.forEach(function (p) {
+        if (p.year !== yr) {
+          if (yr !== null) html += "</div></section>";
+          yr = p.year;
+          html += '<section class="year-group"><h2>' + yr + '</h2><div class="paper-list">';
+        }
+        html += paperHTML(p, false, who);
+      });
+      mine.innerHTML = html + "</div></section>";
+    }
+  }
+
   /* ---- People ---- */
   function initials(name) {
     return name.split(/\s+/).filter(Boolean).map(function (w) { return w[0]; }).slice(0, 2).join("");
@@ -144,8 +169,12 @@
       var links = m.links ? '<div class="member-links">' + Object.keys(m.links).map(function (k) {
         return '<a href="' + esc(m.links[k]) + '" target="_blank" rel="noopener">' + (LINK_LABELS[k] || k) + "</a>";
       }).join("") + "</div>" : "";
-      return '<div class="member reveal in">' + pic +
-        '<div class="member-name">' + esc(m.name) + "</div>" +
+      var name = '<div class="member-name">' + esc(m.name) + "</div>";
+      if (m.slug) {
+        pic = '<a href="people/' + esc(m.slug) + '.html" tabindex="-1" aria-hidden="true">' + pic + "</a>";
+        name = '<a class="member-name" href="people/' + esc(m.slug) + '.html">' + esc(m.name) + "</a>";
+      }
+      return '<div class="member reveal in">' + pic + name +
         '<div class="member-role">' + esc(m.role) + (m.since ? " · since " + esc(m.since) : "") + "</div>" +
         (m.focus ? '<div class="member-focus">' + esc(m.focus) + "</div>" : "") + links + "</div>";
     }).join("");

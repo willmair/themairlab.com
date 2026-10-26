@@ -9,6 +9,9 @@ Each page file starts with a comment block of settings, then the page body:
   theme: dark | light          (dark = page opens on a dark hero)
   scripts: pubs people news    (data files to load, optional)
   -->
+
+Pages in pages/people/ (one per lab member) are written to people/ and get a
+<base href="../"> so the shared header, footer and asset links still work.
 """
 import pathlib, re, time
 
@@ -33,7 +36,7 @@ HEAD = """<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+{base}<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{description}">
 <link rel="canonical" href="{url}">
@@ -133,15 +136,16 @@ JSONLD = """<script type="application/ld+json">
 
 
 def build():
-    for src in sorted(PAGES.glob("*.html")):
+    for src in sorted(PAGES.glob("*.html")) + sorted(PAGES.glob("people/*.html")):
         text = src.read_text()
         m = re.match(r"\s*<!--(.*?)-->\s*", text, re.S)
         meta = dict(re.findall(r"^\s*(\w+):\s*(.+?)\s*$", m.group(1), re.M)) if m else {}
         body = text[m.end():] if m else text
-        name = src.name
+        name = src.relative_to(PAGES).as_posix()
+        section = "people.html" if name.startswith("people/") else name
         current = ' aria-current="page"'
         nav = "\n".join(
-            f'      <a href="{href}"{current if href == name else ""}>{label}</a>'
+            f'      <a href="{href}"{current if href == section else ""}>{label}</a>'
             for href, label in NAV)
         scripts = "".join(f'<script src="assets/js/{s}.js?v={V}"></script>\n' for s in meta.get("scripts", "").split())
         title = meta.get("title", "MAIR Lab")
@@ -149,15 +153,17 @@ def build():
         url = SITE + "/" + ("" if name == "index.html" else name)
         out = HEAD.format(title=full_title, description=meta.get("description", ""), url=url,
                           theme=meta.get("theme", "light"), src=name, logo=LOGO, nav=nav, v=V,
+                          base='<base href="../">\n' if "/" in name else "",
                           support_current='" aria-current="page' if name == "support.html" else "",
                           jsonld=JSONLD if name == "index.html" else "")
         out += body.rstrip() + "\n" + FOOT.format(logo=LOGO, scripts=scripts, v=V)
+        (ROOT / name).parent.mkdir(exist_ok=True)
         (ROOT / name).write_text(out)
         print("built", name)
     (ROOT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-        "".join(f"  <url><loc>{SITE}/{'' if p.name == 'index.html' else p.name}</loc></url>\n"
-                for p in sorted(PAGES.glob("*.html"))) + "</urlset>\n")
+        "".join(f"  <url><loc>{SITE}/{'' if p.name == 'index.html' else p.relative_to(PAGES).as_posix()}</loc></url>\n"
+                for p in sorted(PAGES.glob("*.html")) + sorted(PAGES.glob("people/*.html"))) + "</urlset>\n")
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n")
 
 

@@ -1,0 +1,51 @@
+[
+ {
+  "pmid": "26182205",
+  "year": 2015,
+  "title": "Deinococcus radiodurans PriA is a Pseudohelicase",
+  "authors": [
+   "Lopper ME",
+   "Boone J",
+   "Morrow C"
+  ],
+  "journal": "PLoS One",
+  "doi": "10.1371/journal.pone.0133419",
+  "kind": "article",
+  "member": "christopher-morrow"
+ },
+ {
+  "pmid": "27916805",
+  "year": 2016,
+  "title": "Roles of MicroRNA across Prenatal and Postnatal Periods",
+  "authors": [
+   "Floris I",
+   "Kraft JD",
+   "Altosaar I"
+  ],
+  "journal": "Int J Mol Sci",
+  "doi": "10.3390/ijms17121994",
+  "kind": "review",
+  "member": "jamie-kraft"
+ },
+ {
+  "pmid": "29434254",
+  "year": 2018,
+  "title": "Implementation of a pilot program of Reach Out and Read® in the neonatal intensive care unit: a quality improvement initiative",
+  "authors": [
+   "Levesque BM",
+   "Tran A",
+   "Levesque E",
+   "Shrestha H",
+   "Silva R",
+   "Adams M",
+   "Valles M",
+   "Burke J",
+   "Corning-Clarke A",
+   "Ferguson C"
+  ],
+  "journal": "J Perinatol",
+  "doi": "10.1038/s41372-018-0060-8",
+  "kind": "article",
+  "member": "emily-levesque"
+ }
+]
