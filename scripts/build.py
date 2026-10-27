@@ -85,7 +85,7 @@ FOOT = """</main>
       <div>
         <h4>Visit</h4>
         <ul>
-          <li>Department of Molecular Metabolism</li>
+          <li><a href="https://hsph.harvard.edu/department/molecular-metabolism/" target="_blank" rel="noopener">Department of Molecular Metabolism</a></li>
           <li>Harvard T.H. Chan School of Public Health</li>
           <li>665 Huntington Ave, Bldg 1, Rm 509</li>
           <li>Boston, MA 02115</li>
