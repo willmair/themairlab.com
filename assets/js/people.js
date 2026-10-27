@@ -34,7 +34,7 @@ window.PEOPLE = {
       focus: "Swedish Research Council Fellow",
       slug: "jamie-kraft", photo: "assets/img/people/jamie-kraft.jpg", links: { linkedin: "https://www.linkedin.com/in/jamie-kraft/" } },
     { name: "Emily Levesque", role: "Research Assistant", since: "2026",
-      slug: "emily-levesque", photo: "assets/img/people/emily-levesque.jpg" },
+      slug: "emily-levesque", photo: "assets/img/people/emily-levesque.jpg", links: { linkedin: "https://www.linkedin.com/in/emilylevesque/" } },
     { name: "Kate Roh", role: "Research Assistant", since: "2026",
       slug: "kate-roh", photo: "assets/img/people/kate-roh.jpg" }
   ],
