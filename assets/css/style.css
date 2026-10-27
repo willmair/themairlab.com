@@ -261,6 +261,17 @@ h1, h2, h3 { margin: 0; font-weight: 400; letter-spacing: -0.015em; }
 .timeline { list-style: none; padding: 0; margin: 32px 0 0; border-top: 1px solid var(--line); }
 .timeline li { display: grid; grid-template-columns: 120px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: .95rem; }
 .timeline span { color: var(--muted); }
+.pi-facts { display: grid; gap: 48px; margin-top: 64px; }
+@media (min-width: 900px) { .pi-facts { grid-template-columns: 1.35fr 1fr 1fr; gap: 48px; } }
+.pi-facts .eyebrow { margin: 0 0 14px; }
+.pi-facts .timeline { margin: 0; }
+.pi-facts .timeline li { grid-template-columns: 84px 1fr; gap: 12px; }
+.pi-facts .media-list li { display: block; }
+.media-list span { display: block; font-size: .8rem; margin-bottom: 3px; }
+.media-list a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.media-list a:hover { color: var(--accent); }
+.media-list small { color: var(--muted); font-size: .8rem; margin-left: 4px; }
+.media-list small a { color: inherit; }
 
 .team { display: grid; gap: 28px 22px; grid-template-columns: repeat(2, 1fr); }
 @media (min-width: 720px) { .team { grid-template-columns: repeat(3, 1fr); } }
