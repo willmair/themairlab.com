@@ -87,7 +87,8 @@
     if (window.PUBS) el.textContent = window.PUBS.filter(function (p) { return p.kind !== "preprint"; }).length;
   });
 
-  /* Full list (publications page) */
+  /* Full list (publications page). Papers before LAB_FIRST_YEAR are Will's Ph.D. and postdoc work. */
+  var LAB_FIRST_YEAR = 2013;
   var list = document.getElementById("pub-list");
   if (list && window.PUBS) {
     var search = document.getElementById("pub-search");
@@ -106,10 +107,16 @@
       });
       count.textContent = items.length + (items.length === 1 ? " publication" : " publications");
       if (!items.length) { list.innerHTML = '<div class="empty">No publications match “' + esc(q) + "”.</div>"; return; }
-      var html = "", year = null;
+      var html = "", year = null, earlier = false;
       items.forEach(function (p) {
         if (p.year !== year) {
           if (year !== null) html += "</div></section>";
+          if (p.year < LAB_FIRST_YEAR && !earlier) {
+            earlier = true;
+            html += '<div class="era-break"><h2 class="h2">Before the <em>MAIR Lab</em></h2>' +
+              "<p>Will’s earlier research: Ph.D. at University College London with Linda Partridge, " +
+              "and postdoctoral work at the Salk Institute with Andrew Dillin.</p></div>";
+          }
           year = p.year;
           html += '<section class="year-group"><h2>' + year + '</h2><div class="paper-list">';
         }
