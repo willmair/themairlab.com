@@ -8,16 +8,18 @@ Each page lists:
     name ("Arpit"), so a different A. Sharma on a collaborative paper is never picked up.
     New lab papers appear automatically.
   - CV_EXTRA: CV items that are not on PubMed (some preprints, a book chapter).
-  - Current members only: their papers from before or outside the lab, found by a
+  - Other papers from the person's ORCID record (ORCID below), which they curate
+    themselves, so no name-matching risk. Refreshed every run.
+  - Current members also: papers from before or outside the lab, found by a
     PubMed name search. Name searches pick up other people with the same name, so a
     paper is only shown once its PMID is in that person's CONFIRMED set. New hits go
     to scripts/pending_people_pubs.json for review in the weekly briefing: add the
     PMID to CONFIRMED if it is theirs, or to EXCLUDE if it is someone else's.
-    Alumni pages list MAIR Lab papers only.
+    Alumni without an ORCID list MAIR Lab papers only.
 
 A person with a page needs an entry in PEOPLE (slug = pages/people/<slug>.html).
 """
-import json, pathlib, time, unicodedata, urllib.parse, urllib.request
+import json, pathlib, re, time, unicodedata, urllib.parse, urllib.request
 import xml.etree.ElementTree as ET
 
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
@@ -63,6 +65,13 @@ PEOPLE = {
     "lourdes-pajuelo": ("Lourdes", ["Pajuelo Torres L", "Pajuelo L"]),
     "raymond-laboy-morales": ("Raymond", ["Laboy R"]),
     "iris-lee": ("Chia-Lin", ["Lee CL"]),
+    "samuel-lapp": ("Samuel", ["Lapp S", "Lapp SA"]),
+    "victoria-cottrell": ("Victoria", ["Cottrell V"]),
+    "staci-thornton": ("Staci", ["Thornton S", "Thornton SM"]),
+    "peter-stine": ("Peter", ["Stine PG", "Stine P"]),
+    "ana-gallegos-cruz": ("Ana", ["Gallegos Cruz A", "Cruz AG"]),
+    "elissa-lin": ("Elissa", ["Lin E"]),
+    "tinatini-tavhelidse": ("Tinatini", ["Tavhelidse T", "Tavhelidse-Suck T"]),
 }
 
 # In the CV but not on PubMed. Matched to people by author name like any lab paper.
@@ -75,6 +84,23 @@ CV_EXTRA = [
     {"pmid": "", "year": 2016, "title": "Dietary restriction in C. elegans",
      "authors": ["Zhang Y", "Mair WB"], "journal": "Springer (book chapter)", "doi": "10.1007/978-3-319-44703-2_16", "kind": "review"},
 ]
+
+# ORCID iDs, checked against the lab papers or employment history on each record (26 Oct 2026).
+# Not matches: "Noel Jackson" 0000-0002-9961-5608, "Rohan Sehgal" 0000-0001-5495-2961,
+# "Chia-Lin Lee" 0000-0003-2679-9001 (different people).
+ORCID = {
+    "anne-lanjuin": "0000-0003-2532-0863", "aditi-prabhakar": "0000-0002-6024-4600",
+    "christopher-morrow": "0000-0002-9208-2511", "jamie-kraft": "0000-0001-6336-9997",
+    "miriam-valera-alberni": "0000-0002-1144-573X", "laura-wester": "0000-0003-2668-8141",
+    "vanessa-laversenne": "0000-0002-1929-477X", "carlos-silva-garcia": "0000-0002-0434-7787",
+    "suvagata-roy-chowdhury": "0000-0001-6127-5276", "maria-perez-matos": "0000-0002-2841-9810",
+    "hannah-smith": "0000-0003-2524-8929", "ewelina-nowak": "0009-0001-2521-4908",
+    "samuel-lapp": "0000-0003-2645-170X", "sneha-dutta": "0000-0002-9745-9250",
+    "peter-stine": "0009-0009-6723-8316", "lourdes-pajuelo": "0000-0002-6578-6687",
+    "raymond-laboy-morales": "0000-0002-0375-1550", "victoria-cottrell": "0009-0001-4311-7036",
+    "staci-thornton": "0000-0002-1449-4860", "ana-gallegos-cruz": "0000-0002-6840-922X",
+    "elissa-lin": "0000-0002-7017-3869", "tinatini-tavhelidse": "0000-0002-6103-9019",
+}
 
 # Current members' papers from outside the lab: PubMed query, confirmed PMIDs, excluded PMIDs
 OUTSIDE = {
@@ -94,8 +120,8 @@ OUTSIDE = {
     "christopher-morrow": {
         "query": '"Morrow, Christopher S"[FAU] OR "Morrow, Christopher"[FAU]',
         # University of Wisconsin-Madison (Moore lab, neural stem cells)
-        "confirmed": {"30849364", "32109376", "33190414", "34430917", "34714522", "36056070", "37292613",
-                      "38521057", "38682901", "40684436"},
+        "confirmed": {"26182205", "30849364", "32109376", "33190414", "34430917", "34714522", "36056070",
+                      "37292613", "38521057", "38682901", "40684436"},  # 26182205: Dayton, on his ORCID
         # other Christopher Morrows (AstraZeneca oncology, Johns Hopkins psychiatry, Curtin, pediatrics)
         "exclude": {"22006676", "23416181", "27490725", "27986707", "30424958", "34866317", "38470011",
                     "38835997", "39838223", "40453827", "40554402", "41186491", "41985110", "42442380",
@@ -163,6 +189,63 @@ def is_them(paper, slug):
     return any(ln == last and fn.startswith(fold(first)) for ln, fn in forenames[paper["pmid"]])
 
 
+def orcid_works(oid):
+    """(pmids, other entries without a PMID) from a public ORCID record."""
+    req = urllib.request.Request(f"https://pub.orcid.org/v3.0/{oid}/works", headers={"Accept": "application/json"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        groups = json.load(r)["group"]
+    time.sleep(0.3)
+    pmids, rest = [], []
+    for g in groups:
+        ids = {e["external-id-type"]: (e.get("external-id-value") or "") for e in (g.get("external-ids") or {}).get("external-id", [])}
+        w = g["work-summary"][0]
+        title = re.sub(r"<[^>]+>", "", w["title"]["title"]["value"]).rstrip(".")
+        if JUNK.match(title):
+            continue
+        if ids.get("pmid"):
+            pmids.append(ids["pmid"].strip())
+            continue
+        year = ((w.get("publication-date") or {}).get("year") or {}).get("value")
+        if not year:
+            continue
+        journal = (w.get("journal-title") or {}).get("value") or ""
+        rest.append({"pmid": "", "year": int(year), "title": title,
+                     "authors": [], "journal": journal, "doi": ids.get("doi", "").lower(),
+                     "kind": "preprint" if w.get("type") == "preprint" or "rxiv" in journal.lower() else "article"})
+    # most ORCID works carry only a DOI: find their PubMed records so author lists show
+    dois = [e["doi"] for e in rest if e["doi"]]
+    for i in range(0, len(dois), 40):
+        found = get("esearch.fcgi", term=" OR ".join(f'"{d}"[doi]' for d in dois[i:i + 40]), retmax=100)["esearchresult"]["idlist"]
+        if found:
+            summ = get("esummary.fcgi", id=",".join(found))["result"]
+            for pmid in summ["uids"]:
+                doi = next((a["value"].lower() for a in summ[pmid].get("articleids", []) if a["idtype"] == "doi"), "")
+                if doi in dois:
+                    pmids.append(pmid)
+                    rest = [e for e in rest if e["doi"] != doi]
+    return pmids, rest
+
+
+JUNK = re.compile(r"(erratum|corrigendum|correction|supplementary|data from)\b", re.I)
+
+
+def words(title):
+    t = fold(title).replace("caenorhabditis", "").replace("knockin", "knock in").replace("toolkit", "tool kit")
+    return {w for w in re.findall(r"[a-z0-9]+", t) if len(w) > 3}
+
+
+def same_paper(title, others):
+    """True if a title is a preprint or reworded copy of one already listed."""
+    w = words(title)
+    return any(len(w & o) / max(1, len(w | o)) >= 0.5 for o in others)
+
+
+def key(p):
+    return p.get("pmid") or p.get("doi", "").lower() or fold(p["title"])[:45]
+
+
+LAB_TITLES = {fold(p["title"])[:45] for p in lab + CV_EXTRA}
+LAB_WORDS = [words(p["title"]) for p in lab + CV_EXTRA]
 shown, pending = {}, []
 for slug, (first, names) in PEOPLE.items():
     papers = [dict(p, lab=True) for p in lab + CV_EXTRA if is_them(p, slug)]
@@ -181,8 +264,26 @@ for slug, (first, names) in PEOPLE.items():
                 papers.append(e)
             elif not any(a.startswith("Mair W") for a in e["authors"]):  # lab papers not in the CV are update_pubs.py's job
                 pending.append(dict(e, member=slug))
+    if slug in ORCID:
+        pmids, rest = orcid_works(ORCID[slug])
+        have = LAB_TITLES | {key(p) for p in papers} | {p.get("doi", "").lower() for p in papers if p.get("doi")} | {fold(p["title"])[:45] for p in papers}
+        pmids = [i for i in dict.fromkeys(pmids) if i not in have and i not in (m or {}).get("exclude", set())]
+        seen = LAB_WORDS + [words(p["title"]) for p in papers]
+        if pmids:
+            summary = get("esummary.fcgi", id=",".join(pmids))["result"]
+            for pmid in summary["uids"]:
+                r = summary[pmid]
+                if {"Erratum", "Published Erratum"} & set(r.get("pubtype", [])):
+                    continue
+                e = entry(pmid, r)
+                if fold(e["title"])[:45] not in have and e["doi"].lower() not in have and not same_paper(e["title"], seen):
+                    papers.append(e); have |= {pmid, e["doi"].lower(), fold(e["title"])[:45]}; seen.append(words(e["title"]))
+        for e in rest:
+            if e["doi"] not in have and fold(e["title"])[:45] not in have and not same_paper(e["title"], seen):
+                papers.append(e); have |= {e["doi"], fold(e["title"])[:45]}; seen.append(words(e["title"]))
+        papers = [p for p in papers if p.get("lab") or not any(a.startswith("Mair W") for a in p["authors"]) or p["pmid"] in (m or {}).get("confirmed", set())]
     papers.sort(key=lambda p: (-p["year"], p["title"]))
-    shown[slug] = {"names": names, "papers": papers}
+    shown[slug] = {"names": names, "orcid": ORCID.get(slug, ""), "papers": papers}
 
 OUT.write_text("// Generated by scripts/update_people_pubs.py — do not edit by hand.\n"
                "window.PEOPLE_PUBS = " + json.dumps(shown, ensure_ascii=False, indent=1) + ";\n")

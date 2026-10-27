@@ -134,11 +134,9 @@
   var mine = document.getElementById("person-pubs");
   if (mine && window.PEOPLE_PUBS) {
     var rec = window.PEOPLE_PUBS[mine.dataset.slug] || { names: [], papers: [] };
-    if (!rec.papers.length) {
-      mine.innerHTML = '<div class="empty">No publications yet. Papers appear here automatically once they are indexed in PubMed.</div>';
-    } else {
+    var byYear = function (list) {
       var html = "", yr = null;
-      rec.papers.forEach(function (p) {
+      list.forEach(function (p) {
         if (p.year !== yr) {
           if (yr !== null) html += "</div></section>";
           yr = p.year;
@@ -146,7 +144,17 @@
         }
         html += paperHTML(p, false, rec.names);
       });
-      mine.innerHTML = html + "</div></section>";
+      return html + "</div></section>";
+    };
+    var withLab = rec.papers.filter(function (p) { return p.lab; });
+    var other = rec.papers.filter(function (p) { return !p.lab; });
+    if (!rec.papers.length) {
+      mine.innerHTML = '<div class="empty">No publications yet. Papers appear here automatically once they are indexed in PubMed.</div>';
+    } else if (withLab.length && other.length) {
+      mine.innerHTML = '<h3 class="pubs-sub">With the MAIR Lab</h3>' + byYear(withLab) +
+        '<h3 class="pubs-sub">Other publications</h3>' + byYear(other);
+    } else {
+      mine.innerHTML = byYear(rec.papers);
     }
   }
 

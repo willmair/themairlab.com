@@ -609,3 +609,5 @@ a.news-title:hover { color: var(--accent); }
 .lightbox figure { grid-row: 1; }
 .lightbox .lb-close { position: absolute; top: 12px; right: 16px; }
 @media (max-width: 640px) { .lightbox[open] { grid-template-columns: 40px 1fr 40px; } .lightbox button { font-size: 2rem; padding: 6px; } }
+.pubs-sub { font: 600 .78rem/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 56px 0 0; padding-bottom: 12px; border-bottom: 1px solid var(--ink); }
+.pubs-sub:first-child { margin-top: 36px; }
