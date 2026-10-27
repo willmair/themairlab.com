@@ -1,6 +1,11 @@
 """Refresh assets/js/people_pubs.js: the publication list on each lab member's and alum's profile page.
 
-Usage:  python3 scripts/update_people_pubs.py      (run after update_pubs.py)
+Usage:  python3 scripts/update_people_pubs.py [--all]      (run after update_pubs.py)
+
+Lab papers are refreshed for everyone on every run. Papers from outside the lab
+(ORCID and PubMed searches) are refreshed every run for current members, but for
+alumni only in the first week of the month (or with --all); otherwise their last
+list is kept.
 
 Each page lists:
   - MAIR Lab papers: entries in assets/js/pubs.js (CV-gated) with the person among
@@ -19,7 +24,7 @@ Each page lists:
 
 A person with a page needs an entry in PEOPLE (slug = pages/people/<slug>.html).
 """
-import json, pathlib, re, time, unicodedata, urllib.parse, urllib.request
+import json, pathlib, re, sys, time, unicodedata, urllib.parse, urllib.request
 import xml.etree.ElementTree as ET
 
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
@@ -65,6 +70,19 @@ PEOPLE = {
     "lourdes-pajuelo": ("Lourdes", ["Pajuelo Torres L", "Pajuelo L"]),
     "raymond-laboy-morales": ("Raymond", ["Laboy R"]),
     "iris-lee": ("Chia-Lin", ["Lee CL"]),
+    "malini-bhadra": ("Malini", ["Bhadra M"]),
+    "porsha-howell": ("Porsha", ["Howell P"]),
+    "ryann-guayasamin": ("Ryann", ["Guayasamin R"]),
+    "noel-jackson": ("Noel", ["Jackson N", "Jackson NA"]),
+    "kaitlyn-izzo": ("Kaitlyn", ["Izzo K"]),
+    "juan-ramirez": ("Juan", ["Ramirez JC", "Ramirez J"]),
+    "sydney-brumfield": ("Sydney", ["Brumfield S"]),
+    "jeeyun-kim": ("Jeeyun", ["Kim JA", "Kim J"]),
+    "ana-paula-morales-allende": ("Ana Paula", ["Morales Allende AP", "Morales-Allende AP"]),
+    "dana-fleischhauer": ("Dana", ["Fleischhauer D", "Pfeifer D"]),
+    "catherin-desousa": ("Catherin", ["DeSousa C"]),
+    "cailin-cronin": ("Cailin", ["Cronin C"]),
+    "andrew-larocque": ("Andrew", ["Larocque A"]),
     "samuel-lapp": ("Samuel", ["Lapp S", "Lapp SA"]),
     "victoria-cottrell": ("Victoria", ["Cottrell V"]),
     "staci-thornton": ("Staci", ["Thornton S", "Thornton SM"]),
@@ -139,6 +157,90 @@ OUTSIDE = {
     "kate-roh": {"query": '"Roh, Younjoo"[FAU] OR "Roh, Kate"[FAU]', "confirmed": set(), "exclude": set()},
 }
 
+
+# Alumni without an ORCID: PubMed name search, vetted 26 Oct 2026 (affiliation matched to their known
+# positions). Only CONFIRMED PMIDs are shown; new hits go to pending_people_pubs.json for review.
+ALUMNI_PUBMED = {
+    "arpit-sharma": {"query": "\"Sharma, Arpit\"[FAU] AND (Harvard[ad] OR Tufts[ad] OR elegans OR aging OR longevity OR mitochondria OR peroxisome*)",
+        "confirmed": {'41242931', '32273472'},
+        "exclude": {'26628760', '22754862', '20401857', '36299295', '37602153', '38505998', '41660611', '40257544', '22381019', '38470345', '38678502', '37500959', '39980204', '41298968', '41360239', '39368002', '40014234', '32587220', '37686109', '40522073', '21739020', '36271718', '36387457', '40886252', '40664120', '42243420', '40721402', '34086608', '42594262', '23120561', '40284435', '26224228', '42703705', '30777961', '41839231', '41657590', '42320775', '23120473', '42247589', '21739018', '42910368', '38647206', '37378153', '35377608', '42505571', '24021829', '39274943', '40461274', '26344103', '30957513', '30689605', '40958459', '38739090', '27486743', '36960257', '42658028', '42696892', '31484072', '23120644', '30385511', '39641841', '31305240', '33288450', '33880661', '24294590', '39189316', '42756231', '31070683', '25753164', '31869286', '41346041', '24068067', '23200556', '31789924', '42738889'}},
+    "malini-bhadra": {"query": "\"Bhadra, Malini\"[FAU]",
+        "confirmed": set(),
+        "exclude": set()},
+    "heather-weir": {"query": "\"Weir, Heather J\"[FAU] OR \"Weir, Heather\"[FAU] AND (Astex[ad] OR Harvard[ad] OR elegans)",
+        "confirmed": {'38932616'},
+        "exclude": {'26648935', '28621591', '37046406', '22487531', '27779917', '26513745', '16845815', '18030966'}},
+    "caroline-heintz": {"query": "\"Heintz, Caroline\"[FAU]",
+        "confirmed": {'19394257', '42744283', '21147011', '23559577', '22698810', '26803807', '22300847'},
+        "exclude": set()},
+    "kristopher-burkewitz": {"query": "\"Burkewitz, Kristopher\"[FAU]",
+        "confirmed": {'39932386', '36968071', '35451962', '41959216', '40593680', '42046291', '41629400', '38895376', '42722646', '37574379', '41387410', '40950144', '36305642'},
+        "exclude": set()},
+    "pallas-yao": {"query": "\"Yao, Pallas\"[FAU]",
+        "confirmed": set(),
+        "exclude": {'39071403'}},
+    "caroline-escoubas": {"query": "\"Escoubas, Caroline\"[FAU] OR \"Escoubas, Caroline C\"[FAU]",
+        "confirmed": {'41826292', '42664052', '38658221', '35233577', '39480923', '38490196'},
+        "exclude": {'39677624', '36993292'}},
+    "yue-zhang": {"query": "\"Zhang, Yue\"[FAU] AND \"Mair WB\"[au]",
+        "confirmed": set(),
+        "exclude": {'31752923', '37461570', '38306481', '24191734', '29075327', '37333617', '36607839', '42665934', '39825823', '33159371', '35011057', '42537681', '36276651', '27209349', '28681074', '39799120', '34404427', '33262253', '35504075', '33152509', '31727677', '39425164', '36669290', '40067297', '33978323', '35088753', '39151443', '29532020', '19003489', '29056576', '32393339', '35858757', '27637299', '34561347', '42521824', '37178182', '31803417', '42490418', '24651621', '27007212', '31341179', '33640473', '36184228', '32704510', '42647764', '35905772', '33004794', '38033986', '29405123', '34613627', '38956063', '30507908', '28768909', '33929613', '27824883', '25877509', '30700398', '31335134', '32550934', '30312845', '28717493', '36588101', '37475459', '37480375', '35081860', '41751369', '26422014', '31648171', '32949998', '30596386', '30508507', '36307355', '39362096', '38172637', '32605560', '25573665', '40148321', '41273919'}},
+    "ianessa-morantte": {"query": "\"Morantte, Ianessa\"[FAU]",
+        "confirmed": {'22922647', '26687359', '17991726', '22972301', '23551888', '12567184', '14614508', '39385031', '17964260', '31230716', '12667668', '37745588'},
+        "exclude": set()},
+    "noel-jackson": {"query": "\"Jackson, Noel\"[FAU] OR \"Jackson, Noel A\"[FAU]",
+        "confirmed": {'36062141'},
+        "exclude": {'19891042', '30845509'}},
+    "rohan-sehgal": {"query": "\"Sehgal, Rohan\"[FAU]",
+        "confirmed": set(),
+        "exclude": set()},
+    "robin-yeo": {"query": "\"Yeo, Robin\"[FAU] OR \"Yeo, Robin W\"[FAU]",
+        "confirmed": {'29590078', '37118502', '31282863', '37443352', '26959179', '32726579', '29141961', '39358505'},
+        "exclude": {'25648963'}},
+    "nicole-clark": {"query": "\"Clark, Nicole M\"[FAU] OR (\"Clark, Nicole\"[FAU] AND (Harvard[ad] OR Ohio[ad]))",
+        "confirmed": {'39305068'},
+        "exclude": {'17897767', '18098037', '33118445', '25447994', '17455081'}},
+    "emina-tabakovic": {"query": "\"Tabakovic, Emina\"[FAU] OR \"Gulbis, Emina\"[FAU]",
+        "confirmed": {'41831714'},
+        "exclude": set()},
+    "kaitlyn-izzo": {"query": "\"Izzo, Kaitlyn\"[FAU]",
+        "confirmed": set(),
+        "exclude": set()},
+    "juan-ramirez": {"query": "\"Ramirez, Juan C\"[FAU] AND (Harvard[ad] OR Brandeis[ad])",
+        "confirmed": {'38959314'},
+        "exclude": set()},
+    "sydney-brumfield": {"query": "\"Brumfield, Sydney\"[FAU]",
+        "confirmed": set(),
+        "exclude": set()},
+    "jeeyun-kim": {"query": "\"Kim, Jeeyun A\"[FAU] OR (\"Kim, Jeeyun\"[FAU] AND (Harvard[ad] OR Abbott[ad] OR Berkeley[ad]))",
+        "confirmed": {'33806453', '38936445', '40584822', '42863594', '39344010', '40645431'},
+        "exclude": set()},
+    "ana-paula-morales-allende": {"query": "\"Morales Allende, Ana Paula\"[FAU] OR \"Morales-Allende, Ana Paula\"[FAU]",
+        "confirmed": {'28490641'},
+        "exclude": set()},
+    "iris-lee": {"query": "\"Lee, Chia-Lin\"[FAU] AND (\"Cheng Kung\"[ad] OR Harvard[ad] OR elegans)",
+        "confirmed": {'27305857'},
+        "exclude": {'35459072', '31504897', '33929497', '18758357'}},
+    "dana-fleischhauer": {"query": "\"Fleischhauer, Dana\"[FAU] OR \"Pfeifer, Dana\"[FAU]",
+        "confirmed": {'33651839'},
+        "exclude": set()},
+    "catherin-desousa": {"query": "\"DeSousa, Catherin\"[FAU] OR \"DeSousa, Catherine\"[FAU]",
+        "confirmed": {'40034647', '37646003', '40230520'},
+        "exclude": set()},
+    "cailin-cronin": {"query": "\"Cronin, Cailin\"[FAU]",
+        "confirmed": set(),
+        "exclude": set()},
+    "andrew-larocque": {"query": "\"Larocque, Andrew\"[FAU]",
+        "confirmed": set(),
+        "exclude": {'29309437', '32759291'}},
+    "porsha-howell": {"query": "\"Howell, Porsha\"[FAU]",
+        "confirmed": set(),
+        "exclude": set()},
+    "ryann-guayasamin": {"query": "\"Guayasamin, Ryann\"[FAU]",
+        "confirmed": set(),
+        "exclude": set()},
+}
+OUTSIDE.update(ALUMNI_PUBMED)
 
 def get(endpoint, raw=False, **params):
     params = dict(params, db="pubmed") if raw else dict(params, db="pubmed", retmode="json")
@@ -245,11 +347,24 @@ def key(p):
     return p.get("pmid") or p.get("doi", "").lower() or fold(p["title"])[:45]
 
 
+CURRENT = {"anne-lanjuin", "aditi-prabhakar", "christopher-morrow", "jamie-kraft", "emily-levesque", "kate-roh"}
+REFRESH_ALUMNI = "--all" in sys.argv or __import__("datetime").date.today().day <= 7
+try:
+    _old = OUT.read_text()
+    PREVIOUS = json.loads(_old[_old.index("{"):_old.rindex("}") + 1])
+except (FileNotFoundError, ValueError):
+    PREVIOUS, REFRESH_ALUMNI = {}, True
+
 LAB_TITLES = {fold(p["title"])[:45] for p in lab + CV_EXTRA}
 LAB_WORDS = [words(p["title"]) for p in lab + CV_EXTRA]
 shown, pending = {}, []
 for slug, (first, names) in PEOPLE.items():
     papers = [dict(p, lab=True) for p in lab + CV_EXTRA if is_them(p, slug)]
+    if slug not in CURRENT and not REFRESH_ALUMNI and slug in PREVIOUS:
+        kept = [p for p in PREVIOUS[slug]["papers"] if not p.get("lab")]
+        papers.sort(key=lambda p: (-p["year"], p["title"]))
+        shown[slug] = {"names": names, "orcid": ORCID.get(slug, ""), "papers": papers + sorted(kept, key=lambda p: (-p["year"], p["title"]))}
+        continue
     m = OUTSIDE.get(slug)
     if m:
         lab_ids = {p["pmid"] for p in lab}

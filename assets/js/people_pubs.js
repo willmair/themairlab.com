@@ -1478,6 +1478,28 @@ window.PEOPLE_PUBS = {
     "kind": "review",
     "featured": false,
     "lab": true
+   },
+   {
+    "pmid": "41242931",
+    "year": 2025,
+    "title": "AMPK opens the door to organelle memory and longevity",
+    "authors": [
+     "Sharma A"
+    ],
+    "journal": "Trends Cell Biol",
+    "doi": "10.1016/j.tcb.2025.10.005",
+    "kind": "article"
+   },
+   {
+    "pmid": "32273472",
+    "year": 2020,
+    "title": "Finding community during a pandemic",
+    "authors": [
+     "Sharma A"
+    ],
+    "journal": "Science",
+    "doi": "10.1126/science.368.6487.206",
+    "kind": "article"
    }
   ]
  },
@@ -1487,6 +1509,23 @@ window.PEOPLE_PUBS = {
   ],
   "orcid": "0000-0002-1929-477X",
   "papers": [
+   {
+    "pmid": "",
+    "year": 2020,
+    "title": "AMPK modulates associative learning via neuronal mitochondrial fusion in C. elegans",
+    "authors": [
+     "Escoubas CC",
+     "Laversenne V",
+     "Tabakovic E",
+     "Weir HJ",
+     "Clark N",
+     "Mair WB"
+    ],
+    "journal": "bioRxiv",
+    "doi": "10.1101/2020.11.05.370031",
+    "kind": "preprint",
+    "lab": true
+   },
    {
     "pmid": "41867745",
     "year": 2026,
@@ -1653,23 +1692,6 @@ window.PEOPLE_PUBS = {
     "journal": "Front Immunol",
     "doi": "10.3389/fimmu.2021.607315",
     "kind": "article"
-   },
-   {
-    "pmid": "",
-    "year": 2020,
-    "title": "AMPK modulates associative learning via neuronal mitochondrial fusion in C. elegans",
-    "authors": [
-     "Escoubas CC",
-     "Laversenne V",
-     "Tabakovic E",
-     "Weir HJ",
-     "Clark N",
-     "Mair WB"
-    ],
-    "journal": "bioRxiv",
-    "doi": "10.1101/2020.11.05.370031",
-    "kind": "preprint",
-    "lab": true
    },
    {
     "pmid": "33225991",
@@ -1997,6 +2019,28 @@ window.PEOPLE_PUBS = {
   "orcid": "0000-0001-6127-5276",
   "papers": [
    {
+    "pmid": "31411562",
+    "year": 2019,
+    "title": "Neuronal TORC1 modulates longevity via AMPK and cell nonautonomous regulation of mitochondrial dynamics in C. elegans",
+    "authors": [
+     "Zhang Y",
+     "Lanjuin A",
+     "Chowdhury SR",
+     "Mistry M",
+     "Silva-García CG",
+     "Weir HJ",
+     "Lee CL",
+     "Escoubas CC",
+     "Tabakovic E",
+     "Mair WB"
+    ],
+    "journal": "Elife",
+    "doi": "10.7554/eLife.49158",
+    "kind": "article",
+    "featured": true,
+    "lab": true
+   },
+   {
     "pmid": "39972217",
     "year": 2025,
     "title": "Pro-inflammatory macrophages produce mitochondria-derived superoxide by reverse electron transport at complex I that regulates IL-1β release during NLRP3 inflammasome activation",
@@ -2099,28 +2143,6 @@ window.PEOPLE_PUBS = {
     "journal": "Brain",
     "doi": "10.1093/brain/awae089",
     "kind": "article"
-   },
-   {
-    "pmid": "31411562",
-    "year": 2019,
-    "title": "Neuronal TORC1 modulates longevity via AMPK and cell nonautonomous regulation of mitochondrial dynamics in C. elegans",
-    "authors": [
-     "Zhang Y",
-     "Lanjuin A",
-     "Chowdhury SR",
-     "Mistry M",
-     "Silva-García CG",
-     "Weir HJ",
-     "Lee CL",
-     "Escoubas CC",
-     "Tabakovic E",
-     "Mair WB"
-    ],
-    "journal": "Elife",
-    "doi": "10.7554/eLife.49158",
-    "kind": "article",
-    "featured": true,
-    "lab": true
    }
   ]
  },
@@ -2267,6 +2289,49 @@ window.PEOPLE_PUBS = {
     "kind": "article",
     "featured": true,
     "lab": true
+   },
+   {
+    "pmid": "38932616",
+    "year": 2024,
+    "title": "Fragment-Based Discovery of a Series of Allosteric-Binding Site Modulators of β-Glucocerebrosidase",
+    "authors": [
+     "Palmer N",
+     "Agnew C",
+     "Benn C",
+     "Buffham WJ",
+     "Castro JN",
+     "Chessari G",
+     "Clark M",
+     "Cons BD",
+     "Coyle JE",
+     "Dawson LA",
+     "Hamlett CCF",
+     "Hodson C",
+     "Holding F",
+     "Johnson CN",
+     "Liebeschuetz JW",
+     "Mahajan P",
+     "McCarthy JM",
+     "Murray CW",
+     "O'Reilly M",
+     "Peakman T",
+     "Price A",
+     "Rapti M",
+     "Reeks J",
+     "Schöpf P",
+     "St-Denis JD",
+     "Valenzano C",
+     "Wallis NG",
+     "Walser R",
+     "Weir H",
+     "Wilsher NE",
+     "Woodhead A",
+     "Bento CF",
+     "Tisi D"
+    ],
+    "journal": "J Med Chem",
+    "doi": "10.1021/acs.jmedchem.4c00702",
+    "kind": "article"
    }
   ]
  },
@@ -2420,6 +2485,139 @@ window.PEOPLE_PUBS = {
     "kind": "review",
     "featured": false,
     "lab": true
+   },
+   {
+    "pmid": "42744283",
+    "year": 2026,
+    "title": "Parallel Analysis of Repeat Expansions: An Updated Clinical Nanopore Cas9-Targeted Sequencing Workflow for Nanopore R10 Flow Cells",
+    "authors": [
+     "Scholz V",
+     "Schönrock V",
+     "Erdmann H",
+     "Prokosch V",
+     "Schoedel M",
+     "Almus M",
+     "Sauer M",
+     "Mayer V",
+     "Breithausen E",
+     "van Buren I",
+     "Dineiger C",
+     "Golibrzuch M",
+     "Montero-Hernández M",
+     "Lischka A",
+     "Eggermann K",
+     "Heintz C",
+     "Hallermayr A",
+     "Neuhann T",
+     "Holinski-Feder E",
+     "Abicht A",
+     "Benet-Pagès A",
+     "Lucas MC"
+    ],
+    "journal": "J Mol Diagn",
+    "doi": "10.1016/j.jmoldx.2026.04.007",
+    "kind": "article"
+   },
+   {
+    "pmid": "26803807",
+    "year": 2016,
+    "title": "Co-expression of phenylalanine hydroxylase variants and effects of interallelic complementation on in vitro enzyme activity and genotype-phenotype correlation",
+    "authors": [
+     "Shen N",
+     "Heintz C",
+     "Thiel C",
+     "Okun JG",
+     "Hoffmann GF",
+     "Blau N"
+    ],
+    "journal": "Mol Genet Metab",
+    "doi": "10.1016/j.ymgme.2016.01.004",
+    "kind": "article"
+   },
+   {
+    "pmid": "23559577",
+    "year": 2013,
+    "title": "Tetrahydrobiopterin, its mode of action on phenylalanine hydroxylase, and importance of genotypes for pharmacological therapy of phenylketonuria",
+    "authors": [
+     "Heintz C",
+     "Cotton RG",
+     "Blau N"
+    ],
+    "journal": "Hum Mutat",
+    "doi": "10.1002/humu.22320",
+    "kind": "review"
+   },
+   {
+    "pmid": "22300847",
+    "year": 2012,
+    "title": "Quantification of phenylalanine hydroxylase activity by isotope-dilution liquid chromatography-electrospray ionization tandem mass spectrometry",
+    "authors": [
+     "Heintz C",
+     "Troxler H",
+     "Martinez A",
+     "Thöny B",
+     "Blau N"
+    ],
+    "journal": "Mol Genet Metab",
+    "doi": "10.1016/j.ymgme.2011.12.025",
+    "kind": "article"
+   },
+   {
+    "pmid": "22698810",
+    "year": 2012,
+    "title": "Splicing of phenylalanine hydroxylase (PAH) exon 11 is vulnerable: molecular pathology of mutations in PAH exon 11",
+    "authors": [
+     "Heintz C",
+     "Dobrowolski SF",
+     "Andersen HS",
+     "Demirkol M",
+     "Blau N",
+     "Andresen BS"
+    ],
+    "journal": "Mol Genet Metab",
+    "doi": "10.1016/j.ymgme.2012.05.013",
+    "kind": "article"
+   },
+   {
+    "pmid": "21147011",
+    "year": 2011,
+    "title": "Molecular genetics and impact of residual in vitro phenylalanine hydroxylase activity on tetrahydrobiopterin responsiveness in Turkish PKU population",
+    "authors": [
+     "Dobrowolski SF",
+     "Heintz C",
+     "Miller T",
+     "Ellingson C",
+     "Ellingson C",
+     "Ozer I",
+     "Gökçay G",
+     "Baykal T",
+     "Thöny B",
+     "Demirkol M",
+     "Blau N"
+    ],
+    "journal": "Mol Genet Metab",
+    "doi": "10.1016/j.ymgme.2010.11.158",
+    "kind": "article"
+   },
+   {
+    "pmid": "19394257",
+    "year": 2009,
+    "title": "Genotype-predicted tetrahydrobiopterin (BH4)-responsiveness and molecular genetics in Croatian patients with phenylalanine hydroxylase (PAH) deficiency",
+    "authors": [
+     "Karacić I",
+     "Meili D",
+     "Sarnavka V",
+     "Heintz C",
+     "Thöny B",
+     "Ramadza DP",
+     "Fumić K",
+     "Mardesić D",
+     "Barić I",
+     "Blau N"
+    ],
+    "journal": "Mol Genet Metab",
+    "doi": "10.1016/j.ymgme.2009.03.009",
+    "kind": "article"
    }
   ]
  },
@@ -2602,6 +2800,317 @@ window.PEOPLE_PUBS = {
     "kind": "review",
     "featured": false,
     "lab": true
+   },
+   {
+    "pmid": "42046291",
+    "year": 2026,
+    "title": "Autophagy reshapes the aging ER",
+    "authors": [
+     "Donahue EKF",
+     "Burkewitz K"
+    ],
+    "journal": "Autophagy",
+    "doi": "10.1080/15548627.2026.2662429",
+    "kind": "review"
+   },
+   {
+    "pmid": "41959216",
+    "year": 2026,
+    "title": "ER discontinuities are common in C. elegans neurons, revealing a genetically tractable model for ER network maintenance",
+    "authors": [
+     "Mabry KN",
+     "Donahue EKF",
+     "Orgel AD",
+     "Keuchel B",
+     "Kushner MG",
+     "Burkewitz K"
+    ],
+    "journal": "bioRxiv",
+    "doi": "10.64898/2026.03.31.715740",
+    "kind": "preprint"
+   },
+   {
+    "pmid": "41629400",
+    "year": 2026,
+    "title": "ER remodelling is a feature of ageing and depends on ER-phagy",
+    "authors": [
+     "Donahue EKF",
+     "Hepowit NL",
+     "Ruark EM",
+     "Mulligan AG",
+     "Keuchel B",
+     "Urban ND",
+     "Peng L",
+     "Stephens S",
+     "Johnson DJ",
+     "Wallace NS",
+     "Jackson LP",
+     "Ellisman MH",
+     "Arrojo E Drigo R",
+     "Folkmann AW",
+     "Truttmann MC",
+     "MacGurn JA",
+     "Burkewitz K"
+    ],
+    "journal": "Nat Cell Biol",
+    "doi": "10.1038/s41556-025-01860-1",
+    "kind": "article"
+   },
+   {
+    "pmid": "42722646",
+    "year": 2026,
+    "title": "InsP3R signaling and actomyosin-dependent mitochondrial dynamics play essential roles in mitochondrial stress-induced longevity",
+    "authors": [
+     "Feng G",
+     "Ruark EM",
+     "Mulligan AG",
+     "Donahue EKF",
+     "Hoang AL",
+     "Jacquet-Cribe B",
+     "Peng L",
+     "Burkewitz K"
+    ],
+    "journal": "Nat Commun",
+    "doi": "10.1038/s41467-026-76514-3",
+    "kind": "article"
+   },
+   {
+    "pmid": "41387410",
+    "year": 2025,
+    "title": "Functionally diversified Caenorhabditis elegans BiP orthologs control body growth, reproduction, stress resistance, aging, and autophagy",
+    "authors": [
+     "Urban ND",
+     "Lacy SM",
+     "Van Pelt KM",
+     "Abdon B",
+     "Mattiola Z",
+     "Klaiss A",
+     "Tabler S",
+     "Donahue EKF",
+     "Burkewitz K",
+     "Truttmann MC"
+    ],
+    "journal": "Nat Commun",
+    "doi": "10.1038/s41467-025-65998-0",
+    "kind": "article"
+   },
+   {
+    "pmid": "40950144",
+    "year": 2025,
+    "title": "InsP3R signaling mediates mitochondrial stress-induced longevity through actomyosin-dependent mitochondrial dynamics",
+    "authors": [
+     "Feng G",
+     "Ruark EM",
+     "Mulligan AG",
+     "Donahue EKF",
+     "Hoang A",
+     "Jacquet-Cribe B",
+     "Peng L",
+     "Burkewitz K"
+    ],
+    "journal": "bioRxiv",
+    "doi": "10.1101/2025.08.30.673265",
+    "kind": "preprint"
+   },
+   {
+    "pmid": "40593680",
+    "year": 2025,
+    "title": "Spatial patterns of hepatocyte glucose flux revealed by stable isotope tracing and multi-scale microscopy",
+    "authors": [
+     "Habashy A",
+     "Acree C",
+     "Kim KY",
+     "Zahraei A",
+     "Dufresne M",
+     "Phan S",
+     "Cutler M",
+     "Patterson E",
+     "Mulligan AG",
+     "Burkewitz K",
+     "Flynn CR",
+     "Lantier L",
+     "Deerinck T",
+     "McGuinness OP",
+     "Spraggins JM",
+     "Ellisman MH",
+     "Arrojo E Drigo R"
+    ],
+    "journal": "Nat Commun",
+    "doi": "10.1038/s41467-025-60994-w",
+    "kind": "article"
+   },
+   {
+    "pmid": "39932386",
+    "year": 2025,
+    "title": "Symposia Report of The Annual Biological Sciences Section Meeting of the Gerontological Society of America 2023, Tampa, Florida",
+    "authors": [
+     "Rogina B",
+     "Anderson R",
+     "LeBrasseur NK",
+     "Curran SP",
+     "Yousefzadeh MJ",
+     "Ghosh B",
+     "Duque G",
+     "Howlett S",
+     "Austad S",
+     "Demuth I",
+     "Gerstorf D",
+     "Korfhage J",
+     "Lombard DB",
+     "Abadir P",
+     "Christensen K",
+     "Carey JR",
+     "Alberts SC",
+     "Campos F",
+     "Palavicini JP",
+     "Palmer A",
+     "Bell J",
+     "Basisty N",
+     "de Cabo R",
+     "Gomes A",
+     "Dixit VD",
+     "Sen P",
+     "Baur JA",
+     "Imai SI",
+     "Li X",
+     "Valdez G",
+     "Orr ME",
+     "Pletcher S",
+     "Andersen J",
+     "Jones L",
+     "Castillo-Azofeida D",
+     "Bonaguidi M",
+     "Suh Y",
+     "Duncan FE",
+     "Murray A",
+     "Wang MC",
+     "Burkewitz K",
+     "Henne M",
+     "Zhou K",
+     "Bouhrara M",
+     "Benjamini D",
+     "Kolind S",
+     "Walker KA",
+     "Reiter DA",
+     "Dean DC 3rd",
+     "Gorbunova V",
+     "Gladyshev VN",
+     "Palovics R",
+     "Niedernhofer LJ",
+     "Fan R",
+     "Bueckle AD",
+     "Hurley J",
+     "Esser KA",
+     "Kapahi P",
+     "Sato S",
+     "Jiang N",
+     "Ashiqueali SA",
+     "Diaz J",
+     "Mishra SP",
+     "Raimundo N",
+     "Banarjee R",
+     "Allsopp R",
+     "Reynolds LM",
+     "Zhang B",
+     "Sebastiani P",
+     "Monti S",
+     "Schork N",
+     "Rappaport N"
+    ],
+    "journal": "J Gerontol A Biol Sci Med Sci",
+    "doi": "10.1093/gerona/glaf026",
+    "kind": "article"
+   },
+   {
+    "pmid": "38895376",
+    "year": 2024,
+    "title": "Ribosome-Associated Vesicles promote activity-dependent local translation",
+    "authors": [
+     "Martin-Solana E",
+     "Carter SD",
+     "Donahue EKF",
+     "Ning J",
+     "Glausier JR",
+     "Preisegger MA",
+     "Eisenman L",
+     "Joseph PN",
+     "Bouchet-Marquis C",
+     "Wu K",
+     "Mobini CL",
+     "Frantz AN",
+     "Puig S",
+     "Hampton CM",
+     "Kabbani N",
+     "Jensen GJ",
+     "Watkins SC",
+     "Deisseroth K",
+     "Fenno LE",
+     "Gold MS",
+     "Wills ZP",
+     "Burkewitz K",
+     "Das S",
+     "Freyberg Z"
+    ],
+    "journal": "bioRxiv",
+    "doi": "10.1101/2024.06.07.598007",
+    "kind": "preprint"
+   },
+   {
+    "pmid": "37574379",
+    "year": 2023,
+    "title": "Hitting the brakes on transcription to extend lifespan",
+    "authors": [
+     "Burkewitz K"
+    ],
+    "journal": "Trends Genet",
+    "doi": "10.1016/j.tig.2023.07.007",
+    "kind": "article"
+   },
+   {
+    "pmid": "36968071",
+    "year": 2023,
+    "title": "Tissue-specific heteroplasmy segregation is accompanied by a sharp mtDNA decline in Caenorhabditis elegans soma",
+    "authors": [
+     "Tsyba N",
+     "Feng G",
+     "Grub LK",
+     "Held JP",
+     "Strozak AM",
+     "Burkewitz K",
+     "Patel MR"
+    ],
+    "journal": "iScience",
+    "doi": "10.1016/j.isci.2023.106349",
+    "kind": "article"
+   },
+   {
+    "pmid": "35451962",
+    "year": 2022,
+    "title": "A tRNA processing enzyme is a key regulator of the mitochondrial unfolded protein response",
+    "authors": [
+     "Held JP",
+     "Feng G",
+     "Saunders BR",
+     "Pereira CV",
+     "Burkewitz K",
+     "Patel MR"
+    ],
+    "journal": "Elife",
+    "doi": "10.7554/eLife.71634",
+    "kind": "article"
+   },
+   {
+    "pmid": "36305642",
+    "year": 2022,
+    "title": "Fundamental roles for inter-organelle communication in aging",
+    "authors": [
+     "Donahue EKF",
+     "Ruark EM",
+     "Burkewitz K"
+    ],
+    "journal": "Biochem Soc Trans",
+    "doi": "10.1042/BST20220519",
+    "kind": "review"
    }
   ]
  },
@@ -2712,6 +3221,20 @@ window.PEOPLE_PUBS = {
     "journal": "Cell Rep Methods",
     "doi": "10.1016/j.crmeth.2023.100433",
     "kind": "article",
+    "featured": false,
+    "lab": true
+   },
+   {
+    "pmid": "32644994",
+    "year": 2020,
+    "title": "Predicting longevity responses to dietary restriction: A stepping stone toward precision geroscience",
+    "authors": [
+     "Perez-Matos MC",
+     "Mair WB"
+    ],
+    "journal": "PLoS Genet",
+    "doi": "10.1371/journal.pgen.1008833",
+    "kind": "commentary",
     "featured": false,
     "lab": true
    },
@@ -2862,20 +3385,6 @@ window.PEOPLE_PUBS = {
     "journal": "Endocr Connect",
     "doi": "10.1530/EC-20-0423",
     "kind": "article"
-   },
-   {
-    "pmid": "32644994",
-    "year": 2020,
-    "title": "Predicting longevity responses to dietary restriction: A stepping stone toward precision geroscience",
-    "authors": [
-     "Perez-Matos MC",
-     "Mair WB"
-    ],
-    "journal": "PLoS Genet",
-    "doi": "10.1371/journal.pgen.1008833",
-    "kind": "commentary",
-    "featured": false,
-    "lab": true
    },
    {
     "pmid": "30550414",
@@ -3035,17 +3544,6 @@ window.PEOPLE_PUBS = {
     "lab": true
    },
    {
-    "pmid": "33251397",
-    "year": 2020,
-    "title": "Improving trainee engagement in science: Lessons from a virtual seminar series",
-    "authors": [
-     "Smith HJ"
-    ],
-    "journal": "Transl Med Aging",
-    "doi": "10.1016/j.tma.2020.06.003",
-    "kind": "article"
-   },
-   {
     "pmid": "32619405",
     "year": 2020,
     "title": "Metabolic Communication and Healthy Aging: Where Should We Focus Our Energy?",
@@ -3075,6 +3573,17 @@ window.PEOPLE_PUBS = {
     "kind": "review",
     "featured": false,
     "lab": true
+   },
+   {
+    "pmid": "33251397",
+    "year": 2020,
+    "title": "Improving trainee engagement in science: Lessons from a virtual seminar series",
+    "authors": [
+     "Smith HJ"
+    ],
+    "journal": "Transl Med Aging",
+    "doi": "10.1016/j.tma.2020.06.003",
+    "kind": "article"
    }
   ]
  },
@@ -3377,15 +3886,6 @@ window.PEOPLE_PUBS = {
     "lab": true
    },
    {
-    "pmid": "",
-    "year": 2020,
-    "title": "Experimental Design Chalk Talks, a Formative Assessment Employed in a Graduate Molecular Biology Course, Promotes Active Learning and Growth in the Competencies of Experimental Design and Science Communication",
-    "authors": [],
-    "journal": "The FASEB Journal",
-    "doi": "10.1096/fasebj.2020.34.s1.07420",
-    "kind": "article"
-   },
-   {
     "pmid": "31064766",
     "year": 2019,
     "title": "Single-Copy Knock-In Loci for Defined Gene Expression in Caenorhabditis elegans",
@@ -3402,6 +3902,41 @@ window.PEOPLE_PUBS = {
     "kind": "article",
     "featured": false,
     "lab": true
+   },
+   {
+    "pmid": "27919065",
+    "year": 2017,
+    "title": "Splicing factor 1 modulates dietary restriction and TORC1 pathway longevity in C. elegans",
+    "authors": [
+     "Heintz C",
+     "Doktor TK",
+     "Lanjuin A",
+     "Escoubas C",
+     "Zhang Y",
+     "Weir HJ",
+     "Dutta S",
+     "Silva-García CG",
+     "Bruun GH",
+     "Morantte I",
+     "Hoxhaj G",
+     "Manning BD",
+     "Andresen BS",
+     "Mair WB"
+    ],
+    "journal": "Nature",
+    "doi": "10.1038/nature20789",
+    "kind": "article",
+    "featured": true,
+    "lab": true
+   },
+   {
+    "pmid": "",
+    "year": 2020,
+    "title": "Experimental Design Chalk Talks, a Formative Assessment Employed in a Graduate Molecular Biology Course, Promotes Active Learning and Growth in the Competencies of Experimental Design and Science Communication",
+    "authors": [],
+    "journal": "The FASEB Journal",
+    "doi": "10.1096/fasebj.2020.34.s1.07420",
+    "kind": "article"
    },
    {
     "pmid": "30126436",
@@ -3444,32 +3979,6 @@ window.PEOPLE_PUBS = {
     "journal": "Advances in Proteomics and Bioinformatics",
     "doi": "",
     "kind": "article"
-   },
-   {
-    "pmid": "27919065",
-    "year": 2017,
-    "title": "Splicing factor 1 modulates dietary restriction and TORC1 pathway longevity in C. elegans",
-    "authors": [
-     "Heintz C",
-     "Doktor TK",
-     "Lanjuin A",
-     "Escoubas C",
-     "Zhang Y",
-     "Weir HJ",
-     "Dutta S",
-     "Silva-García CG",
-     "Bruun GH",
-     "Morantte I",
-     "Hoxhaj G",
-     "Manning BD",
-     "Andresen BS",
-     "Mair WB"
-    ],
-    "journal": "Nature",
-    "doi": "10.1038/nature20789",
-    "kind": "article",
-    "featured": true,
-    "lab": true
    },
    {
     "pmid": "26341815",
@@ -3636,6 +4145,145 @@ window.PEOPLE_PUBS = {
     "kind": "article",
     "featured": true,
     "lab": true
+   },
+   {
+    "pmid": "42664052",
+    "year": 2026,
+    "title": "Core activation program and selective regional responsiveness of microglia during aging and parabiosis",
+    "authors": [
+     "Naz H",
+     "Lu N",
+     "Escoubas CC",
+     "Sager L",
+     "Xiong J",
+     "Pálovics R",
+     "Yamada S",
+     "Molofsky AV",
+     "Wyss-Coray T",
+     "Li Q",
+     "Zhao G"
+    ],
+    "journal": "Cell Rep",
+    "doi": "10.1016/j.celrep.2026.117919",
+    "kind": "article"
+   },
+   {
+    "pmid": "41826292",
+    "year": 2026,
+    "title": "Microglial cathepsin B is necessary for neuronal efferocytosis in zebrafish and mice during brain development",
+    "authors": [
+     "Silva NJ",
+     "Anderson SR",
+     "Mula SA",
+     "Escoubas CC",
+     "Nakajo H",
+     "Molofsky AV"
+    ],
+    "journal": "Nat Commun",
+    "doi": "10.1038/s41467-026-70350-1",
+    "kind": "article"
+   },
+   {
+    "pmid": "39480923",
+    "year": 2024,
+    "title": "Group 2 innate lymphoid cells promote inhibitory synapse development and social behavior",
+    "authors": [
+     "Barron JJ",
+     "Mroz NM",
+     "Taloma SE",
+     "Dahlgren MW",
+     "Ortiz-Carpena JF",
+     "Keefe MG",
+     "Escoubas CC",
+     "Dorman LC",
+     "Vainchtein ID",
+     "Chiaranunt P",
+     "Kotas ME",
+     "Nowakowski TJ",
+     "Bender KJ",
+     "Molofsky AB",
+     "Molofsky AV"
+    ],
+    "journal": "Science",
+    "doi": "10.1126/science.adi1025",
+    "kind": "article"
+   },
+   {
+    "pmid": "38658221",
+    "year": 2024,
+    "title": "Microglia as integrators of brain-associated molecular patterns",
+    "authors": [
+     "Escoubas CC",
+     "Molofsky AV"
+    ],
+    "journal": "Trends Immunol",
+    "doi": "10.1016/j.it.2024.03.009",
+    "kind": "review"
+   },
+   {
+    "pmid": "38490196",
+    "year": 2024,
+    "title": "Type-I-interferon-responsive microglia shape cortical development and behavior",
+    "authors": [
+     "Escoubas CC",
+     "Dorman LC",
+     "Nguyen PT",
+     "Lagares-Linares C",
+     "Nakajo H",
+     "Anderson SR",
+     "Barron JJ",
+     "Wade SD",
+     "Cuevas B",
+     "Vainchtein ID",
+     "Silva NJ",
+     "Guajardo R",
+     "Xiao Y",
+     "Lidsky PV",
+     "Wang EY",
+     "Rivera BM",
+     "Taloma SE",
+     "Kim DK",
+     "Kaminskaya E",
+     "Nakao-Inoue H",
+     "Schwer B",
+     "Arnold TD",
+     "Molofsky AB",
+     "Condello C",
+     "Andino R",
+     "Nowakowski TJ",
+     "Molofsky AV"
+    ],
+    "journal": "Cell",
+    "doi": "10.1016/j.cell.2024.02.020",
+    "kind": "article"
+   },
+   {
+    "pmid": "35233577",
+    "year": 2023,
+    "title": "Type I interferon responsive microglia shape cortical development and behavior",
+    "authors": [
+     "Escoubas CC",
+     "Dorman LC",
+     "Nguyen PT",
+     "Lagares-Linares C",
+     "Nakajo H",
+     "Anderson SR",
+     "Cuevas B",
+     "Vainchtein ID",
+     "Silva NJ",
+     "Xiao Y",
+     "Lidsky PV",
+     "Wang EY",
+     "Taloma SE",
+     "Nakao-Inoue H",
+     "Schwer B",
+     "Andino R",
+     "Nowakowski TJ",
+     "Molofsky AV"
+    ],
+    "journal": "bioRxiv",
+    "doi": "10.1101/2021.04.29.441889",
+    "kind": "preprint"
    }
   ]
  },
@@ -3946,6 +4594,221 @@ window.PEOPLE_PUBS = {
     "kind": "article",
     "featured": true,
     "lab": true
+   },
+   {
+    "pmid": "39385031",
+    "year": 2024,
+    "title": "A modular circuit coordinates the diversification of courtship strategies",
+    "authors": [
+     "Coleman RT",
+     "Morantte I",
+     "Koreman GT",
+     "Cheng ML",
+     "Ding Y",
+     "Ruta V"
+    ],
+    "journal": "Nature",
+    "doi": "10.1038/s41586-024-08028-1",
+    "kind": "article"
+   },
+   {
+    "pmid": "37745588",
+    "year": 2023,
+    "title": "A modular circuit architecture coordinates the diversification of courtship strategies in Drosophila",
+    "authors": [
+     "Coleman RT",
+     "Morantte I",
+     "Koreman GT",
+     "Cheng ML",
+     "Ding Y",
+     "Ruta V"
+    ],
+    "journal": "bioRxiv",
+    "doi": "10.1101/2023.09.16.558080",
+    "kind": "preprint"
+   },
+   {
+    "pmid": "31230716",
+    "year": 2019,
+    "title": "Distinct Dopamine Receptor Pathways Underlie the Temporal Sensitivity of Associative Learning",
+    "authors": [
+     "Handler A",
+     "Graham TGW",
+     "Cohn R",
+     "Morantte I",
+     "Siliciano AF",
+     "Zeng J",
+     "Li Y",
+     "Ruta V"
+    ],
+    "journal": "Cell",
+    "doi": "10.1016/j.cell.2019.05.040",
+    "kind": "article"
+   },
+   {
+    "pmid": "26687359",
+    "year": 2015,
+    "title": "Coordinated and Compartmentalized Neuromodulation Shapes Sensory Processing in Drosophila",
+    "authors": [
+     "Cohn R",
+     "Morantte I",
+     "Ruta V"
+    ],
+    "journal": "Cell",
+    "doi": "10.1016/j.cell.2015.11.019",
+    "kind": "article"
+   },
+   {
+    "pmid": "23551888",
+    "year": 2013,
+    "title": "FOXO4 is necessary for neural differentiation of human embryonic stem cells",
+    "authors": [
+     "Vilchez D",
+     "Boyer L",
+     "Lutz M",
+     "Merkwirth C",
+     "Morantte I",
+     "Tse C",
+     "Spencer B",
+     "Page L",
+     "Masliah E",
+     "Berggren WT",
+     "Gage FH",
+     "Dillin A"
+    ],
+    "journal": "Aging Cell",
+    "doi": "10.1111/acel.12067",
+    "kind": "article"
+   },
+   {
+    "pmid": "22972301",
+    "year": 2012,
+    "title": "Increased proteasome activity in human embryonic stem cells is regulated by PSMD11",
+    "authors": [
+     "Vilchez D",
+     "Boyer L",
+     "Morantte I",
+     "Lutz M",
+     "Merkwirth C",
+     "Joyce D",
+     "Spencer B",
+     "Page L",
+     "Masliah E",
+     "Berggren WT",
+     "Gage FH",
+     "Dillin A"
+    ],
+    "journal": "Nature",
+    "doi": "10.1038/nature11468",
+    "kind": "article"
+   },
+   {
+    "pmid": "22922647",
+    "year": 2012,
+    "title": "RPN-6 determines C. elegans longevity under proteotoxic stress conditions",
+    "authors": [
+     "Vilchez D",
+     "Morantte I",
+     "Liu Z",
+     "Douglas PM",
+     "Merkwirth C",
+     "Rodrigues AP",
+     "Manning G",
+     "Dillin A"
+    ],
+    "journal": "Nature",
+    "doi": "10.1038/nature11315",
+    "kind": "article"
+   },
+   {
+    "pmid": "17991726",
+    "year": 2008,
+    "title": "Activation of thyroid hormone is transcriptionally regulated by epidermal growth factor in human placenta-derived JEG3 cells",
+    "authors": [
+     "Canettieri G",
+     "Franchi A",
+     "Guardia MD",
+     "Morantte I",
+     "Santaguida MG",
+     "Harney JW",
+     "Larsen PR",
+     "Centanni M"
+    ],
+    "journal": "Endocrinology",
+    "doi": "10.1210/en.2007-0779",
+    "kind": "article"
+   },
+   {
+    "pmid": "17964260",
+    "year": 2007,
+    "title": "Functional interdependence at the chromatin level between the MKK6/p38 and IGF1/PI3K/AKT pathways during muscle differentiation",
+    "authors": [
+     "Serra C",
+     "Palacios D",
+     "Mozzetta C",
+     "Forcales SV",
+     "Morantte I",
+     "Ripani M",
+     "Jones DR",
+     "Du K",
+     "Jhala US",
+     "Simone C",
+     "Puri PL"
+    ],
+    "journal": "Mol Cell",
+    "doi": "10.1016/j.molcel.2007.08.021",
+    "kind": "article"
+   },
+   {
+    "pmid": "12567184",
+    "year": 2003,
+    "title": "Attenuation of a phosphorylation-dependent activator by an HDAC-PP1 complex",
+    "authors": [
+     "Canettieri G",
+     "Morantte I",
+     "Guzmán E",
+     "Asahara H",
+     "Herzig S",
+     "Anderson SD",
+     "Yates JR 3rd",
+     "Montminy M"
+    ],
+    "journal": "Nat Struct Biol",
+    "doi": "10.1038/nsb895",
+    "kind": "article"
+   },
+   {
+    "pmid": "14614508",
+    "year": 2003,
+    "title": "CREB controls hepatic lipid metabolism through nuclear hormone receptor PPAR-gamma",
+    "authors": [
+     "Herzig S",
+     "Hedrick S",
+     "Morantte I",
+     "Koo SH",
+     "Galimi F",
+     "Montminy M"
+    ],
+    "journal": "Nature",
+    "doi": "10.1038/nature02110",
+    "kind": "article"
+   },
+   {
+    "pmid": "12667668",
+    "year": 2003,
+    "title": "Humanization of an anti-ICAM-1 antibody with over 50-fold affinity and functional improvement",
+    "authors": [
+     "Luo GX",
+     "Kohlstaedt LA",
+     "Charles CH",
+     "Gorfain E",
+     "Morantte I",
+     "Williams JH",
+     "Fang F"
+    ],
+    "journal": "J Immunol Methods",
+    "doi": "10.1016/s0022-1759(02)00542-2",
+    "kind": "article"
    }
   ]
  },
@@ -4032,6 +4895,155 @@ window.PEOPLE_PUBS = {
     "kind": "article",
     "featured": true,
     "lab": true
+   },
+   {
+    "pmid": "39358505",
+    "year": 2024,
+    "title": "CRISPR-Cas9 screens reveal regulators of ageing in neural stem cells",
+    "authors": [
+     "Ruetz TJ",
+     "Pogson AN",
+     "Kashiwagi CM",
+     "Gagnon SD",
+     "Morton B",
+     "Sun ED",
+     "Na J",
+     "Yeo RW",
+     "Leeman DS",
+     "Morgens DW",
+     "Tsui CK",
+     "Li A",
+     "Bassik MC",
+     "Brunet A"
+    ],
+    "journal": "Nature",
+    "doi": "10.1038/s41586-024-07972-2",
+    "kind": "article"
+   },
+   {
+    "pmid": "37443352",
+    "year": 2023,
+    "title": "Chromatin accessibility dynamics of neurogenic niche cells reveal defects in neural stem cell adhesion and migration during aging",
+    "authors": [
+     "Yeo RW",
+     "Zhou OY",
+     "Zhong BL",
+     "Sun ED",
+     "Navarro Negredo P",
+     "Nair S",
+     "Sharmin M",
+     "Ruetz TJ",
+     "Wilson M",
+     "Kundaje A",
+     "Dunn AR",
+     "Brunet A"
+    ],
+    "journal": "Nat Aging",
+    "doi": "10.1038/s43587-023-00449-3",
+    "kind": "article"
+   },
+   {
+    "pmid": "37118502",
+    "year": 2022,
+    "title": "Males induce premature demise of the opposite sex by multifaceted strategies",
+    "authors": [
+     "Booth LN",
+     "Shi C",
+     "Tantilert C",
+     "Yeo RW",
+     "Miklas JW",
+     "Hebestreit K",
+     "Hollenhorst CN",
+     "Maures TJ",
+     "Buckley MT",
+     "Murphy CT",
+     "Brunet A"
+    ],
+    "journal": "Nat Aging",
+    "doi": "10.1038/s43587-022-00276-y",
+    "kind": "article"
+   },
+   {
+    "pmid": "32726579",
+    "year": 2020,
+    "title": "Aging and Rejuvenation of Neural Stem Cells and Their Niches",
+    "authors": [
+     "Navarro Negredo P",
+     "Yeo RW",
+     "Brunet A"
+    ],
+    "journal": "Cell Stem Cell",
+    "doi": "10.1016/j.stem.2020.07.002",
+    "kind": "review"
+   },
+   {
+    "pmid": "31282863",
+    "year": 2019,
+    "title": "Self-sperm induce resistance to the detrimental effects of sexual encounters with males in hermaphroditic nematodes",
+    "authors": [
+     "Booth LN",
+     "Maures TJ",
+     "Yeo RW",
+     "Tantilert C",
+     "Brunet A"
+    ],
+    "journal": "Elife",
+    "doi": "10.7554/eLife.46418",
+    "kind": "article"
+   },
+   {
+    "pmid": "29590078",
+    "year": 2018,
+    "title": "Lysosome activation clears aggregates and enhances quiescent neural stem cell activation during aging",
+    "authors": [
+     "Leeman DS",
+     "Hebestreit K",
+     "Ruetz T",
+     "Webb AE",
+     "McKay A",
+     "Pollina EA",
+     "Dulken BW",
+     "Zhao X",
+     "Yeo RW",
+     "Ho TT",
+     "Mahmoudi S",
+     "Devarajan K",
+     "Passegué E",
+     "Rando TA",
+     "Frydman J",
+     "Brunet A"
+    ],
+    "journal": "Science",
+    "doi": "10.1126/science.aag3048",
+    "kind": "article"
+   },
+   {
+    "pmid": "29141961",
+    "year": 2017,
+    "title": "Chromatin accessibility dynamics reveal novel functional enhancers in C. elegans",
+    "authors": [
+     "Daugherty AC",
+     "Yeo RW",
+     "Buenrostro JD",
+     "Greenleaf WJ",
+     "Kundaje A",
+     "Brunet A"
+    ],
+    "journal": "Genome Res",
+    "doi": "10.1101/gr.226233.117",
+    "kind": "article"
+   },
+   {
+    "pmid": "26959179",
+    "year": 2016,
+    "title": "Deconstructing Dietary Restriction: A Case for Systems Approaches in Aging",
+    "authors": [
+     "Yeo R",
+     "Brunet A"
+    ],
+    "journal": "Cell Metab",
+    "doi": "10.1016/j.cmet.2016.02.018",
+    "kind": "commentary"
    }
   ]
  },
@@ -4079,6 +5091,18 @@ window.PEOPLE_PUBS = {
     "kind": "article",
     "featured": true,
     "lab": true
+   },
+   {
+    "pmid": "41831714",
+    "year": 2026,
+    "title": "Surgical Management of Heterotopic Cesarean Scar Pregnancy With Preservation of Intrauterine Pregnancy in the First Trimester",
+    "authors": [
+     "Gulbis E",
+     "McEntee K"
+    ],
+    "journal": "J Minim Invasive Gynecol",
+    "doi": "10.1016/j.jmig.2026.03.008",
+    "kind": "article"
    }
   ]
  },
@@ -4123,6 +5147,28 @@ window.PEOPLE_PUBS = {
     "kind": "article",
     "featured": false,
     "lab": true
+   },
+   {
+    "pmid": "39305068",
+    "year": 2024,
+    "title": "Assessing Community Needs Among Spanish-Speaking Patients in a Free Clinic Setting",
+    "authors": [
+     "Clark NM",
+     "Hirsch JL",
+     "Wallace CR",
+     "Zhou J",
+     "Gonzalez A",
+     "Calderon F",
+     "Bogdanski E",
+     "Rodriguez C",
+     "Anderson M",
+     "Scott S",
+     "Wyne K",
+     "Shah S"
+    ],
+    "journal": "J Prim Care Community Health",
+    "doi": "10.1177/21501319241276810",
+    "kind": "article"
    }
   ]
  },
@@ -4133,6 +5179,30 @@ window.PEOPLE_PUBS = {
   ],
   "orcid": "0000-0002-6578-6687",
   "papers": [
+   {
+    "pmid": "37946042",
+    "year": 2023,
+    "title": "The CRTC-1 transcriptional domain is required for COMPASS complex-mediated longevity in C. elegans",
+    "authors": [
+     "Silva-García CG",
+     "Láscarez-Lagunas LI",
+     "Papsdorf K",
+     "Heintz C",
+     "Prabhakar A",
+     "Morrow CS",
+     "Pajuelo Torres L",
+     "Sharma A",
+     "Liu J",
+     "Colaiácovo MP",
+     "Brunet A",
+     "Mair WB"
+    ],
+    "journal": "Nat Aging",
+    "doi": "10.1038/s43587-023-00517-8",
+    "kind": "article",
+    "featured": true,
+    "lab": true
+   },
    {
     "pmid": "40911784",
     "year": 2025,
@@ -4157,30 +5227,6 @@ window.PEOPLE_PUBS = {
     "journal": "Cancer Res",
     "doi": "10.1158/0008-5472.CAN-25-0315",
     "kind": "article"
-   },
-   {
-    "pmid": "37946042",
-    "year": 2023,
-    "title": "The CRTC-1 transcriptional domain is required for COMPASS complex-mediated longevity in C. elegans",
-    "authors": [
-     "Silva-García CG",
-     "Láscarez-Lagunas LI",
-     "Papsdorf K",
-     "Heintz C",
-     "Prabhakar A",
-     "Morrow CS",
-     "Pajuelo Torres L",
-     "Sharma A",
-     "Liu J",
-     "Colaiácovo MP",
-     "Brunet A",
-     "Mair WB"
-    ],
-    "journal": "Nat Aging",
-    "doi": "10.1038/s43587-023-00517-8",
-    "kind": "article",
-    "featured": true,
-    "lab": true
    }
   ]
  },
@@ -4190,6 +5236,27 @@ window.PEOPLE_PUBS = {
   ],
   "orcid": "0000-0002-0375-1550",
   "papers": [
+   {
+    "pmid": "29107506",
+    "year": 2017,
+    "title": "Dietary Restriction and AMPK Increase Lifespan via Mitochondrial Network and Peroxisome Remodeling",
+    "authors": [
+     "Weir HJ",
+     "Yao P",
+     "Huynh FK",
+     "Escoubas CC",
+     "Goncalves RL",
+     "Burkewitz K",
+     "Laboy R",
+     "Hirschey MD",
+     "Mair WB"
+    ],
+    "journal": "Cell Metab",
+    "doi": "10.1016/j.cmet.2017.09.024",
+    "kind": "article",
+    "featured": true,
+    "lab": true
+   },
    {
     "pmid": "40787975",
     "year": 2025,
@@ -4296,27 +5363,6 @@ window.PEOPLE_PUBS = {
     "kind": "article"
    },
    {
-    "pmid": "29107506",
-    "year": 2017,
-    "title": "Dietary Restriction and AMPK Increase Lifespan via Mitochondrial Network and Peroxisome Remodeling",
-    "authors": [
-     "Weir HJ",
-     "Yao P",
-     "Huynh FK",
-     "Escoubas CC",
-     "Goncalves RL",
-     "Burkewitz K",
-     "Laboy R",
-     "Hirschey MD",
-     "Mair WB"
-    ],
-    "journal": "Cell Metab",
-    "doi": "10.1016/j.cmet.2017.09.024",
-    "kind": "article",
-    "featured": true,
-    "lab": true
-   },
-   {
     "pmid": "27922823",
     "year": 2016,
     "title": "Slm35 links mitochondrial stress response and longevity through TOR signaling pathway",
@@ -4361,8 +5407,357 @@ window.PEOPLE_PUBS = {
     "kind": "article",
     "featured": true,
     "lab": true
+   },
+   {
+    "pmid": "27305857",
+    "year": 2016,
+    "title": "Exercise in an electrotactic flow chamber ameliorates age-related degeneration in Caenorhabditis elegans",
+    "authors": [
+     "Chuang HS",
+     "Kuo WJ",
+     "Lee CL",
+     "Chu IH",
+     "Chen CS"
+    ],
+    "journal": "Sci Rep",
+    "doi": "10.1038/srep28064",
+    "kind": "article"
    }
   ]
+ },
+ "ryann-guayasamin": {
+  "names": [
+   "Guayasamin R"
+  ],
+  "orcid": "",
+  "papers": []
+ },
+ "noel-jackson": {
+  "names": [
+   "Jackson N",
+   "Jackson NA"
+  ],
+  "orcid": "",
+  "papers": [
+   {
+    "pmid": "36062141",
+    "year": 2022,
+    "title": "The prion-like transmission of tau oligomers via exosomes",
+    "authors": [
+     "Jackson NA",
+     "Guerrero-Muñoz MJ",
+     "Castillo-Carranza DL"
+    ],
+    "journal": "Front Aging Neurosci",
+    "doi": "10.3389/fnagi.2022.974414",
+    "kind": "review"
+   }
+  ]
+ },
+ "kaitlyn-izzo": {
+  "names": [
+   "Izzo K"
+  ],
+  "orcid": "",
+  "papers": []
+ },
+ "juan-ramirez": {
+  "names": [
+   "Ramirez JC",
+   "Ramirez J"
+  ],
+  "orcid": "",
+  "papers": [
+   {
+    "pmid": "38959314",
+    "year": 2024,
+    "title": "From hit to vial: Precision discovery and development of an imidazopyrimidine TLR7/8 agonist adjuvant formulation",
+    "authors": [
+     "Soni D",
+     "Borriello F",
+     "Scott DA",
+     "Feru F",
+     "DeLeon M",
+     "Brightman SE",
+     "Cheng WK",
+     "Melhem G",
+     "Smith JA",
+     "Ramirez JC",
+     "Barman S",
+     "Cameron M",
+     "Kelly A",
+     "Walker K",
+     "Nanishi E",
+     "van Haren SD",
+     "Phan T",
+     "Qi Y",
+     "Kinsey R",
+     "Raczy MM",
+     "Ozonoff A",
+     "Pettengill MA",
+     "Hubbell JA",
+     "Fox CB",
+     "Dowling DJ",
+     "Levy O"
+    ],
+    "journal": "Sci Adv",
+    "doi": "10.1126/sciadv.adg3747",
+    "kind": "article"
+   }
+  ]
+ },
+ "sydney-brumfield": {
+  "names": [
+   "Brumfield S"
+  ],
+  "orcid": "",
+  "papers": []
+ },
+ "jeeyun-kim": {
+  "names": [
+   "Kim JA",
+   "Kim J"
+  ],
+  "orcid": "",
+  "papers": [
+   {
+    "pmid": "42863594",
+    "year": 2026,
+    "title": "Real-World Adoption and Associated Outcomes of Aspirin Avoidance After HeartMate 3 Implantation: The PRAISE HM3 Study",
+    "authors": [
+     "Sheikh FH",
+     "Molina EJ",
+     "Jorde UP",
+     "Byku MP",
+     "Kim JA",
+     "Bettampadi D",
+     "Gustafsson F",
+     "Mehra MR"
+    ],
+    "journal": "J Card Fail",
+    "doi": "10.1016/j.cardfail.2026.09.031",
+    "kind": "article"
+   },
+   {
+    "pmid": "40645431",
+    "year": 2026,
+    "title": "Two-year follow-up of the safety and clinical outcomes of stylet-driven leads for left bundle branch area pacing compared with right ventricular pacing in the Medicare population",
+    "authors": [
+     "Vijayaraman P",
+     "Sharma PS",
+     "Atwater BD",
+     "Nair D",
+     "Joza J",
+     "Zanon F",
+     "Li W",
+     "Kim JA",
+     "Nabutovsky Y",
+     "Lee K",
+     "Schaller RD"
+    ],
+    "journal": "Heart Rhythm",
+    "doi": "10.1016/j.hrthm.2025.07.004",
+    "kind": "article"
+   },
+   {
+    "pmid": "38936445",
+    "year": 2025,
+    "title": "Evaluating cardiac lead safety using observational, real-world data: EP PASSION proof-of-concept study",
+    "authors": [
+     "Braghieri L",
+     "Ahmed A",
+     "Curtis AB",
+     "Kim JA",
+     "Connolly AT",
+     "Nabutovsky Y",
+     "Kim G",
+     "Ganz L",
+     "Wilkoff BL"
+    ],
+    "journal": "Heart Rhythm",
+    "doi": "10.1016/j.hrthm.2024.06.045",
+    "kind": "article"
+   },
+   {
+    "pmid": "40584822",
+    "year": 2025,
+    "title": "Nutritional deficiencies and muscle loss in adults with type 2 diabetes using GLP-1 receptor agonists: A retrospective observational study",
+    "authors": [
+     "Scott Butsch W",
+     "Sulo S",
+     "Chang AT",
+     "Kim JA",
+     "Kerr KW",
+     "Williams DR",
+     "Hegazi R",
+     "Panchalingam T",
+     "Goates S",
+     "Heymsfield SB"
+    ],
+    "journal": "Obes Pillars",
+    "doi": "10.1016/j.obpill.2025.100186",
+    "kind": "article"
+   },
+   {
+    "pmid": "39344010",
+    "year": 2024,
+    "title": "Comparing complication rates between Abbott Tendril 2088 and competitive manufacturer leads: Novel real-world data approach",
+    "authors": [
+     "Ahmed A",
+     "Wilkoff BL",
+     "Kim JA",
+     "Nabutovsky Y",
+     "Kim G",
+     "Desmond M",
+     "Ganz L",
+     "Curtis AB"
+    ],
+    "journal": "J Cardiovasc Electrophysiol",
+    "doi": "10.1111/jce.16437",
+    "kind": "article"
+   },
+   {
+    "pmid": "33806453",
+    "year": 2021,
+    "title": "Pharmacogenomic Biomarkers in US FDA-Approved Drug Labels (2000-2020)",
+    "authors": [
+     "Kim JA",
+     "Ceccarelli R",
+     "Lu CY"
+    ],
+    "journal": "J Pers Med",
+    "doi": "10.3390/jpm11030179",
+    "kind": "article"
+   }
+  ]
+ },
+ "ana-paula-morales-allende": {
+  "names": [
+   "Morales Allende AP",
+   "Morales-Allende AP"
+  ],
+  "orcid": "",
+  "papers": [
+   {
+    "pmid": "28490641",
+    "year": 2017,
+    "title": "Fetal alcohol exposure reduces responsiveness of taste nerves and trigeminal chemosensory neurons to ethanol and its flavor components",
+    "authors": [
+     "Glendinning JI",
+     "Tang J",
+     "Morales Allende AP",
+     "Bryant BP",
+     "Youngentob L",
+     "Youngentob SL"
+    ],
+    "journal": "J Neurophysiol",
+    "doi": "10.1152/jn.00108.2017",
+    "kind": "article"
+   }
+  ]
+ },
+ "dana-fleischhauer": {
+  "names": [
+   "Fleischhauer D",
+   "Pfeifer D"
+  ],
+  "orcid": "",
+  "papers": [
+   {
+    "pmid": "33651839",
+    "year": 2021,
+    "title": "Anoctamin 2-chloride channels reduce simple spike activity and mediate inhibition at elevated calcium concentration in cerebellar Purkinje cells",
+    "authors": [
+     "Auer F",
+     "Franco Taveras E",
+     "Klein U",
+     "Kesenheimer C",
+     "Fleischhauer D",
+     "Möhrlen F",
+     "Frings S"
+    ],
+    "journal": "PLoS One",
+    "doi": "10.1371/journal.pone.0247801",
+    "kind": "article"
+   }
+  ]
+ },
+ "catherin-desousa": {
+  "names": [
+   "DeSousa C"
+  ],
+  "orcid": "",
+  "papers": [
+   {
+    "pmid": "40230520",
+    "year": 2025,
+    "title": "Gut microbiome remodeling provides protection from an environmental toxin",
+    "authors": [
+     "Kim D",
+     "El Khoury S",
+     "Pérez-Carrascal OM",
+     "DeSousa C",
+     "Jung DK",
+     "Bohley S",
+     "Wijaya L",
+     "Trang K",
+     "Shapira M"
+    ],
+    "journal": "iScience",
+    "doi": "10.1016/j.isci.2025.112209",
+    "kind": "article"
+   },
+   {
+    "pmid": "40034647",
+    "year": 2025,
+    "title": "SRS microscopy identifies inhibition of vitellogenesis as a mediator of lifespan extension by caloric restriction in C. elegans",
+    "authors": [
+     "Yang B",
+     "Manifold B",
+     "Han W",
+     "DeSousa C",
+     "Zhu W",
+     "Streets A",
+     "Titov DV"
+    ],
+    "journal": "bioRxiv",
+    "doi": "10.1101/2025.01.31.636008",
+    "kind": "preprint"
+   },
+   {
+    "pmid": "37646003",
+    "year": 2023,
+    "title": "Microbiome remodeling through bacterial competition and host behavior enables rapid adaptation to environmental toxins",
+    "authors": [
+     "Kim D",
+     "Pérez-Carrascal OM",
+     "DeSousa C",
+     "Jung DK",
+     "Bohley S",
+     "Wijaya L",
+     "Trang K",
+     "Khoury S",
+     "Shapira M"
+    ],
+    "journal": "bioRxiv",
+    "doi": "10.1101/2023.06.21.545768",
+    "kind": "preprint"
+   }
+  ]
+ },
+ "cailin-cronin": {
+  "names": [
+   "Cronin C"
+  ],
+  "orcid": "",
+  "papers": []
+ },
+ "andrew-larocque": {
+  "names": [
+   "Larocque A"
+  ],
+  "orcid": "",
+  "papers": []
  },
  "samuel-lapp": {
   "names": [
