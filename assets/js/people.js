@@ -67,7 +67,7 @@ window.PEOPLE = {
 
     // Research staff
     { group: "staff", name: "Cailin Cronin", role: "Research Assistant (undergraduate researcher, 2024)", years: "2026", now: "M.S. student in Pharmaceutical Engineering", slug: "cailin-cronin", links: { linkedin: "https://www.linkedin.com/in/cailin-cronin/" } },
-    { group: "staff", name: "Peter Stine", role: "Research Assistant", years: "2019–2025", now: "Ph.D. student, New York University", slug: "peter-stine" },
+    { group: "staff", name: "Peter Stine", role: "Research Assistant", years: "2019–2025", now: "Ph.D. student, New York University", slug: "peter-stine", links: { linkedin: "https://www.linkedin.com/in/peter-stine-579907174/" } },
     { group: "staff", name: "Ianessa Morantte", role: "Senior Scientist", years: "2011–2015", now: "Head of Therapeutics R&D, Prolific Machines", slug: "ianessa-morantte", photo: "assets/img/people/ianessa-morantte.jpg", links: { linkedin: "https://www.linkedin.com/in/imorantte/" } },
     { group: "staff", name: "Andrew Laroque", role: "Research Assistant", years: "2020", slug: "andrew-laroque" },
     { group: "staff", name: "Rohan Sehgal", role: "Research Assistant", years: "2018–2019", slug: "rohan-sehgal" },
