@@ -9,10 +9,10 @@ Written 26 October 2026. Keep this file at the top of OneDrive, and keep a perso
 | Website (themairlab.com): all code, text, data, scripts and the web-ready photos | GitHub repository `willmair/themairlab.com` | OneDrive `MAIR Lab Website/` |
 | Rules for any AI assistant working on the site (`CLAUDE.md`) and the technical rebuild guide (`REBUILD.md`) | GitHub repository (kept off the public site) | OneDrive `MAIR Lab Website/` |
 | CV (Word and PDF), older versions, CV rules and data | OneDrive `CV/` (start with `CV/_cv_source/CV_Maintenance_Notes.md`) | Nowhere else yet |
-| Monday briefing instructions and your writing rules for AI | Laptop `~/.claude/` | OneDrive `Chief of Staff/` |
-| Brand kit (logo, fonts, slide template) | OneDrive `MAIR Lab Brand/` | Nowhere else yet |
+| Monday briefing instructions and your writing rules for AI | Laptop `~/.claude/` | OneDrive `06 Career & Admin/Chief of Staff/` |
+| Brand kit (logo, fonts, slide template) | OneDrive `01 Lab/Brand & Website/MAIR Lab Brand/` | Nowhere else yet |
 | Brand working files (logo and card builders) | OneDrive `MAIR Lab Website/brand/` | Nowhere else yet |
-| Current lab headshots (originals) | OneDrive `Admin_WM+TK/Lab Headshots/` | Web versions on GitHub |
+| Current lab headshots (originals) | OneDrive `01 Lab/Photos & Headshots/Lab Headshots/` | Web versions on GitHub |
 | Alumni headshots (originals) | OneDrive `01 Lab/Personnel Records (private)/_Alumni/<name>/` | Web versions on GitHub |
 | Lab photos and your headshots (originals) | OneDrive `01 Lab/Photos & Headshots/` | Gallery web versions on GitHub |
 
@@ -28,9 +28,9 @@ themairlab.com would keep working.
      your personal backup (Part 3).
 2. Give the assistant its instructions. Open the website folder in Claude Code (or any coding assistant)
    and ask it to read `REBUILD.md` and `CLAUDE.md` first. Add the text of
-   `Chief of Staff/Claude global instructions.md` to its global instructions.
+   `06 Career & Admin/Chief of Staff/Claude global instructions.md` to its global instructions.
 3. Recreate the Monday briefing. Ask the assistant to create a scheduled task for Mondays at 7am using the
-   text of `Chief of Staff/Weekly briefing setup.md`. It needs Outlook access for the email and calendar
+   text of `06 Career & Admin/Chief of Staff/Weekly briefing setup.md`. It needs Outlook access for the email and calendar
    parts; the website and CV parts only need the files.
 4. Check it works. Ask the assistant to preview the site locally, run the publications update, and
    publish a small test change. The site goes live about a minute after a push to GitHub.
@@ -44,11 +44,11 @@ Only these are irreplaceable and exist solely in Harvard OneDrive. Together they
 | Copy this | Size | Why |
 |---|---|---|
 | `CV/` (the whole folder) | 8 MB | Your CV, every prior version, and the rules and data that keep it accurate |
-| `Chief of Staff/` | under 1 MB | Monday briefing instructions and your AI writing rules |
-| `MAIR Lab Brand/` | 2 MB | Logo, fonts and slide template |
+| `06 Career & Admin/Chief of Staff/` | under 1 MB | Monday briefing instructions and your AI writing rules |
+| `01 Lab/Brand & Website/MAIR Lab Brand/` | 2 MB | Logo, fonts and slide template |
 | `MAIR Lab Website/brand/` | 4 MB | Files that regenerate the logo and link-preview card |
 | `01 Lab/Photos & Headshots/` | 135 MB | Original lab photos and your headshots |
-| `Admin_WM+TK/Lab Headshots/` | 4 MB | Original current-member headshots |
+| `01 Lab/Photos & Headshots/Lab Headshots/` | 4 MB | Original current-member headshots |
 | Alumni headshot images only (see the note below) | small | Originals of the alumni portraits |
 
 You do not need to copy the website itself. It is all on GitHub.
@@ -92,7 +92,7 @@ Or ask your AI assistant: "run the iCloud backup". It takes under a minute.
 What it does:
 - refreshes the OneDrive copies of the Monday briefing instructions and your AI writing rules first;
 - copies `CV`, `Chief of Staff`, `MAIR Lab Brand`, the whole `MAIR Lab Website` folder (including `brand/`),
-  `01 Lab/Photos & Headshots` and `Admin_WM+TK/Lab Headshots`;
+  `01 Lab/Photos & Headshots` (including `Lab Headshots`);
 - copies only the headshot images from the alumni folders, never the confidential trainee records;
 - only adds and updates files, never deletes from the backup, and writes the date to `backup-log.txt`.
 

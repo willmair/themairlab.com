@@ -15,19 +15,18 @@ if [ ! -d "$(dirname "$DEST")" ]; then echo "iCloud Drive not found. Turn on iCl
 mkdir -p "$DEST"
 
 # 1. Refresh the OneDrive copies of the laptop-only setup (briefing instructions, writing rules).
-mkdir -p "$ONEDRIVE/Chief of Staff"
+mkdir -p "$ONEDRIVE/06 Career & Admin/Chief of Staff"
 [ -f "$HOME/.claude/scheduled-tasks/weekly-chief-of-staff/SKILL.md" ] && \
-  cp "$HOME/.claude/scheduled-tasks/weekly-chief-of-staff/SKILL.md" "$ONEDRIVE/Chief of Staff/Weekly briefing setup.md"
-[ -f "$HOME/.claude/CLAUDE.md" ] && cp "$HOME/.claude/CLAUDE.md" "$ONEDRIVE/Chief of Staff/Claude global instructions.md"
+  cp "$HOME/.claude/scheduled-tasks/weekly-chief-of-staff/SKILL.md" "$ONEDRIVE/06 Career & Admin/Chief of Staff/Weekly briefing setup.md"
+[ -f "$HOME/.claude/CLAUDE.md" ] && cp "$HOME/.claude/CLAUDE.md" "$ONEDRIVE/06 Career & Admin/Chief of Staff/Claude global instructions.md"
 
 # 2. Whole folders: OneDrive path, then name inside the backup.
 FOLDERS=(
   "CV|CV"
-  "Chief of Staff|Chief of Staff"
-  "MAIR Lab Brand|MAIR Lab Brand"
+  "06 Career & Admin/Chief of Staff|Chief of Staff"
+  "01 Lab/Brand & Website/MAIR Lab Brand|MAIR Lab Brand"
   "MAIR Lab Website|MAIR Lab Website"
   "01 Lab/Photos & Headshots|Photos & Headshots"
-  "Admin_WM+TK/Lab Headshots|Current lab headshots"
 )
 for pair in "${FOLDERS[@]}"; do
   src="$ONEDRIVE/${pair%%|*}"; name="${pair##*|}"

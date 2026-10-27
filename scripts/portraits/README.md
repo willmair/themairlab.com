@@ -1,7 +1,7 @@
 # Lab portraits
 
 All headshots on the site share one look: 4:5 portrait, 960×1200, eyes at the same height and
-size, on a warm stone background. Originals live in `OneDrive/Admin_WM+TK/Lab Headshots`.
+size, on a warm stone background. Originals live in `OneDrive/01 Lab/Photos & Headshots/Lab Headshots`.
 
 To add or replace someone (macOS; uses Apple's built-in subject detection, no uploads):
 

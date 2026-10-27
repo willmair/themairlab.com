@@ -12,17 +12,17 @@ outside Harvard OneDrive, and which accounts depend on Harvard, see `BACKUP.md`.
 | Working rules for any AI assistant | `CLAUDE.md` in this repo | GitHub and OneDrive |
 | This guide | `REBUILD.md` in this repo | GitHub and OneDrive |
 | Brand working files (logo builders, fonts, slide template builder) | `brand/` in the OneDrive copy of this folder (not on GitHub) | OneDrive |
-| Published brand kit | `OneDrive/MAIR Lab Brand/` | OneDrive |
+| Published brand kit | `OneDrive/01 Lab/Brand & Website/MAIR Lab Brand/` | OneDrive |
 | Will's CV (the source of truth for lab content) | `OneDrive/CV/Mair_CV_<date>.docx` and `.pdf`; older copies in `OneDrive/CV/Prior versions/` | OneDrive |
 | CV rules, data and history | `OneDrive/CV/_cv_source/` (start with `CV_Maintenance_Notes.md`) | OneDrive |
-| Weekly briefing instructions (Mondays 7am) | Copy at `OneDrive/Chief of Staff/Weekly briefing setup.md` | OneDrive |
-| Will's global writing rules for AI assistants | Copy at `OneDrive/Chief of Staff/Claude global instructions.md` | OneDrive |
-| Headshot originals | `OneDrive/Admin_WM+TK/Lab Headshots/` (current), `OneDrive/Lab Personnel/_Alumni/<name>/` (alumni) | OneDrive |
-| Gallery photo originals | `OneDrive/Admin_/Lab Photos/2025/` | OneDrive |
+| Weekly briefing instructions (Mondays 7am) | Copy at `OneDrive/06 Career & Admin/Chief of Staff/Weekly briefing setup.md` | OneDrive |
+| Will's global writing rules for AI assistants | Copy at `OneDrive/06 Career & Admin/Chief of Staff/Claude global instructions.md` | OneDrive |
+| Headshot originals | `OneDrive/01 Lab/Photos & Headshots/Lab Headshots/` (current), `OneDrive/01 Lab/Personnel Records (private)/_Alumni/<name>/` (alumni) | OneDrive |
+| Gallery photo originals | `OneDrive/01 Lab/Photos & Headshots/Lab Photos/2025/` | OneDrive |
 
 The live copies of the briefing instructions and global rules sit on the laptop in `~/.claude/`
 (`scheduled-tasks/weekly-chief-of-staff/SKILL.md` and `CLAUDE.md`). After editing either one, copy it
-to `OneDrive/Chief of Staff/` again so the backup stays current.
+to `OneDrive/06 Career & Admin/Chief of Staff/` again so the backup stays current.
 
 ## Accounts (all Will's own logins, no passwords are stored anywhere in this repo)
 
@@ -44,7 +44,7 @@ to `OneDrive/Chief of Staff/` again so the backup stays current.
 4. Publish: commit and push to `main`; the site is live in about a minute. Commit identity:
    William Mair <44441828+willmair@users.noreply.github.com>.
 5. Recreate the weekly briefing: create a scheduled task (Mondays 7am) whose instructions are the text of
-   `OneDrive/Chief of Staff/Weekly briefing setup.md`. Put `Claude global instructions.md` into the new
+   `OneDrive/06 Career & Admin/Chief of Staff/Weekly briefing setup.md`. Put `Claude global instructions.md` into the new
    assistant's global instructions.
 
 ## How the site is built
