@@ -36,7 +36,7 @@ window.PEOPLE = {
     { name: "Emily Levesque", role: "Research Assistant", since: "2026",
       slug: "emily-levesque", photo: "assets/img/people/emily-levesque.jpg", links: { linkedin: "https://www.linkedin.com/in/emilylevesque/" } },
     { name: "Kate Roh", role: "Research Assistant", since: "2026",
-      slug: "kate-roh", photo: "assets/img/people/kate-roh.jpg" }
+      slug: "kate-roh", photo: "assets/img/people/kate-roh.jpg", links: { linkedin: "https://www.linkedin.com/in/kate-roh-598268294/" } }
   ],
 
   alumni: [
