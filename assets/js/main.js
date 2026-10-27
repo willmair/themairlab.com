@@ -47,7 +47,7 @@
   }
   function authorList(a, max, also) {
     var html = a.map(function (n) {
-      return /^Mair W/.test(n) || n === also ? "<b>" + esc(n) + "</b>" : esc(n);
+      return /^Mair W/.test(n) || (also && also.indexOf(n) !== -1) ? "<b>" + esc(n) + "</b>" : esc(n);
     });
     if (max && html.length > max) {
       var mairIdx = a.findIndex(function (n) { return /^Mair W/.test(n); });
@@ -130,26 +130,21 @@
     render();
   }
 
-  /* Member profile page: their lab papers (pubs.js) plus papers from before or outside the lab (people_pubs.js) */
+  /* Profile page (lab member or alum): papers from people_pubs.js, built by scripts/update_people_pubs.py */
   var mine = document.getElementById("person-pubs");
-  if (mine && window.PUBS) {
-    var who = mine.dataset.pubmed;
-    var lab = who ? window.PUBS.filter(function (p) { return p.authors.indexOf(who) !== -1; }) : [];
-    var other = (window.PEOPLE_PUBS || {})[mine.dataset.slug] || [];
-    var all = lab.concat(other.filter(function (o) {
-      return !lab.some(function (p) { return p.pmid === o.pmid; });
-    })).sort(function (a, b) { return b.year - a.year || a.title.localeCompare(b.title); });
-    if (!all.length) {
+  if (mine && window.PEOPLE_PUBS) {
+    var rec = window.PEOPLE_PUBS[mine.dataset.slug] || { names: [], papers: [] };
+    if (!rec.papers.length) {
       mine.innerHTML = '<div class="empty">No publications yet. Papers appear here automatically once they are indexed in PubMed.</div>';
     } else {
       var html = "", yr = null;
-      all.forEach(function (p) {
+      rec.papers.forEach(function (p) {
         if (p.year !== yr) {
           if (yr !== null) html += "</div></section>";
           yr = p.year;
           html += '<section class="year-group"><h2>' + yr + '</h2><div class="paper-list">';
         }
-        html += paperHTML(p, false, who);
+        html += paperHTML(p, false, rec.names);
       });
       mine.innerHTML = html + "</div></section>";
     }
@@ -195,7 +190,8 @@
       return '<div class="alumni-group"><h3 class="alumni-head">' + g[1] + ' <span>' + list.length + "</span></h3><ul class=\"alumni\">" +
         list.map(function (m) {
           var detail = [m.role, m.years].filter(Boolean).join(", ");
-          return "<li>" + esc(m.name) + "<span>" + esc(detail) + (m.now ? " → " + esc(m.now) : "") + "</span></li>";
+          var name = m.slug ? '<a href="people/' + esc(m.slug) + '.html">' + esc(m.name) + "</a>" : esc(m.name);
+          return "<li>" + name + "<span>" + esc(detail) + (m.now ? " → " + esc(m.now) : "") + "</span></li>";
         }).join("") + "</ul></div>";
     }).join("");
   }

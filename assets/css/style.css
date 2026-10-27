@@ -287,6 +287,10 @@ a.member-name:hover { color: var(--accent); }
 @media (min-width: 1040px) { .alumni { columns: 3; } }
 .alumni li { break-inside: avoid; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: .95rem; }
 .alumni span { color: var(--muted); font-size: .86rem; display: block; }
+.alumni a { color: inherit; text-decoration: underline; text-decoration-color: var(--line); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.alumni a:hover { color: var(--accent); text-decoration-color: currentColor; }
+.person .portrait.avatar { max-width: 320px; }
+.person .portrait.avatar span { color: var(--accent); }
 
 /* ---------- Publications ---------- */
 .pub-tools {
