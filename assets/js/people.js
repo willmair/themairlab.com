@@ -80,7 +80,7 @@ window.PEOPLE = {
     { group: "student", name: "Lourdes Pajuelo", role: "Postbaccalaureate Researcher", years: "2022", now: "Ph.D. student, Weill Cornell Graduate School of Medical Sciences", slug: "lourdes-pajuelo", links: { linkedin: "https://www.linkedin.com/in/lourdes-pajuelo-31395514b/" } },
     { group: "student", name: "Dana Fleischhauer", role: "Visiting Student (Heidelberg)", years: "2019", now: "Senior Consultant, Temedica", slug: "dana-fleischhauer", links: { linkedin: "https://www.linkedin.com/in/dana-pfeifer/" } },
     { group: "student", name: "Iris Lee", role: "Visiting Student (NCKU, Taiwan)", years: "2016", slug: "iris-lee" },
-    { group: "student", name: "Tinatini Tavhelidse", role: "Visiting Student (Heidelberg)", years: "2012", slug: "tinatini-tavhelidse" },
+    { group: "student", name: "Tinatini Tavhelidse", role: "Visiting Student (Heidelberg)", years: "2012", now: "Postdoctoral Researcher, Heidelberg University", slug: "tinatini-tavhelidse", links: { orcid: "https://orcid.org/0000-0002-6103-9019" } },
     { group: "student", name: "Catherine DeSousa", role: "Undergraduate Researcher", years: "2022", now: "Ph.D. student, Metabolic Biology, UC Berkeley", slug: "catherine-desousa", links: { linkedin: "https://www.linkedin.com/in/catherin-desousa-77392a241/" } },
     { group: "student", name: "Victoria Cottrell", role: "Undergraduate Researcher (Wellesley)", years: "2021", slug: "victoria-cottrell" },
     { group: "student", name: "Kaitlyn Izzo", role: "Undergraduate Researcher (Northeastern)", years: "2016", now: "Principal Scientist, Eli Lilly and Company", slug: "kaitlyn-izzo", photo: "assets/img/people/kaitlyn-izzo.jpg", links: { linkedin: "https://www.linkedin.com/in/kaitlynizzo/" } },
@@ -89,7 +89,7 @@ window.PEOPLE = {
     { group: "student", name: "Staci Thornton", role: "Undergraduate Researcher (UConn)", years: "2015", now: "Research Specialist, Howard Hughes Medical Institute", slug: "staci-thornton", photo: "assets/img/people/staci-thornton.jpg", links: { linkedin: "https://www.linkedin.com/in/thorntonstaci/" } },
     { group: "student", name: "Raymond Laboy Morales", role: "Undergraduate Researcher (UNAM)", years: "2015", now: "Research Fellow, Joslin Diabetes Center", slug: "raymond-laboy-morales", photo: "assets/img/people/raymond-laboy-morales.jpg", links: { linkedin: "https://www.linkedin.com/in/raylaboy/" } },
     { group: "student", name: "Jeeyun Kim", role: "Undergraduate Researcher (UC Berkeley)", years: "2014", now: "Senior Clinical Scientist, Abbott", slug: "jeeyun-kim", photo: "assets/img/people/jeeyun-kim.jpg", links: { linkedin: "https://www.linkedin.com/in/jeeyunakim/" } },
-    { group: "student", name: "Elissa Lin", role: "Undergraduate Researcher (Harvard)", years: "2013", slug: "elissa-lin" },
+    { group: "student", name: "Elissa Lin", role: "Undergraduate Researcher (Harvard)", years: "2013", now: "Clinical Researcher, Brigham and Women's Hospital", slug: "elissa-lin", links: { linkedin: "https://www.linkedin.com/in/elissa-lin-3a07733a/" } },
     { group: "student", name: "Ana Paula Morales Allende", role: "Undergraduate Researcher (Barnard)", years: "2013", now: "Vascular Surgeon, Conway Medical Center", slug: "ana-paula-morales-allende", photo: "assets/img/people/ana-paula-morales-allende.jpg", links: { linkedin: "https://www.linkedin.com/in/anapaulamoralesallende/" } }
   ]
 };
