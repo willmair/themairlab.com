@@ -27,6 +27,7 @@ FOLDERS=(
   "01 Lab/Brand & Website/MAIR Lab Brand|MAIR Lab Brand"
   "MAIR Lab Website|MAIR Lab Website"
   "01 Lab/Photos & Headshots|Photos & Headshots"
+  "06 Career & Admin/Admin_WM+TK/Lab Headshots|Lab Headshots"
 )
 for pair in "${FOLDERS[@]}"; do
   src="$ONEDRIVE/${pair%%|*}"; name="${pair##*|}"

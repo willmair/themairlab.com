@@ -17,7 +17,7 @@ outside Harvard OneDrive, and which accounts depend on Harvard, see `BACKUP.md`.
 | CV rules, data and history | `OneDrive/CV/_cv_source/` (start with `CV_Maintenance_Notes.md`) | OneDrive |
 | Weekly briefing instructions (Mondays 7am) | Copy at `OneDrive/06 Career & Admin/Chief of Staff/Weekly briefing setup.md` | OneDrive |
 | Will's global writing rules for AI assistants | Copy at `OneDrive/06 Career & Admin/Chief of Staff/Claude global instructions.md` | OneDrive |
-| Headshot originals | `OneDrive/01 Lab/Photos & Headshots/Lab Headshots/` (current), `OneDrive/01 Lab/Personnel Records (private)/_Alumni/<name>/` (alumni) | OneDrive |
+| Headshot originals | `OneDrive/06 Career & Admin/Admin_WM+TK/Lab Headshots/` (current), `OneDrive/01 Lab/Personnel Records (private)/_Alumni/<name>/` (alumni) | OneDrive |
 | Gallery photo originals | `OneDrive/01 Lab/Photos & Headshots/Lab Photos/2025/` | OneDrive |
 
 The live copies of the briefing instructions and global rules sit on the laptop in `~/.claude/`
@@ -64,7 +64,7 @@ to `OneDrive/06 Career & Admin/Chief of Staff/` again so the backup stays curren
     Current members refresh every run, alumni in the first week of each month (or with `--all`).
 - Styles: `assets/css/style.css`. Behavior and renderers: `assets/js/main.js`.
 - Profile pages: one per current member and alum in `pages/people/<slug>.html`. Bios use CV facts only.
-  Portraits are 4:5 on a shared stone background (`scripts/portraits/`); Scout keeps her own background.
+  Portraits are 4:5 crops, eyes aligned, each keeping its original background (`scripts/portraits/`).
 
 ## Routines
 

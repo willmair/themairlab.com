@@ -12,7 +12,7 @@ Written 26 October 2026. Keep this file at the top of OneDrive, and keep a perso
 | Monday briefing instructions and your writing rules for AI | Laptop `~/.claude/` | OneDrive `06 Career & Admin/Chief of Staff/` |
 | Brand kit (logo, fonts, slide template) | OneDrive `01 Lab/Brand & Website/MAIR Lab Brand/` | Nowhere else yet |
 | Brand working files (logo and card builders) | OneDrive `MAIR Lab Website/brand/` | Nowhere else yet |
-| Current lab headshots (originals) | OneDrive `01 Lab/Photos & Headshots/Lab Headshots/` | Web versions on GitHub |
+| Current lab headshots (originals) | OneDrive `06 Career & Admin/Admin_WM+TK/Lab Headshots/` | Web versions on GitHub |
 | Alumni headshots (originals) | OneDrive `01 Lab/Personnel Records (private)/_Alumni/<name>/` | Web versions on GitHub |
 | Lab photos and your headshots (originals) | OneDrive `01 Lab/Photos & Headshots/` | Gallery web versions on GitHub |
 
@@ -48,7 +48,7 @@ Only these are irreplaceable and exist solely in Harvard OneDrive. Together they
 | `01 Lab/Brand & Website/MAIR Lab Brand/` | 2 MB | Logo, fonts and slide template |
 | `MAIR Lab Website/brand/` | 4 MB | Files that regenerate the logo and link-preview card |
 | `01 Lab/Photos & Headshots/` | 135 MB | Original lab photos and your headshots |
-| `01 Lab/Photos & Headshots/Lab Headshots/` | 4 MB | Original current-member headshots |
+| `06 Career & Admin/Admin_WM+TK/Lab Headshots/` | 4 MB | Original current-member headshots |
 | Alumni headshot images only (see the note below) | small | Originals of the alumni portraits |
 
 You do not need to copy the website itself. It is all on GitHub.
@@ -92,7 +92,7 @@ Or ask your AI assistant: "run the iCloud backup". It takes under a minute.
 What it does:
 - refreshes the OneDrive copies of the Monday briefing instructions and your AI writing rules first;
 - copies `CV`, `Chief of Staff`, `MAIR Lab Brand`, the whole `MAIR Lab Website` folder (including `brand/`),
-  `01 Lab/Photos & Headshots` (including `Lab Headshots`);
+  `01 Lab/Photos & Headshots` and `06 Career & Admin/Admin_WM+TK/Lab Headshots`;
 - copies only the headshot images from the alumni folders, never the confidential trainee records;
 - only adds and updates files, never deletes from the backup, and writes the date to `backup-log.txt`.
 
