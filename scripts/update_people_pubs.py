@@ -132,9 +132,10 @@ OUTSIDE = {
         # University of Gothenburg (Wallenberg Laboratory)
         "confirmed": {"33801198", "33803130", "34022871", "34204944", "35104001", "35789845", "37532933",
                       "37658064"},
-        "exclude": set(),
+        "exclude": {"27916805"},  # Ottawa 2016 review: Will said ignore for now (26 Oct 2026)
     },
-    "emily-levesque": {"query": '"Levesque, Emily"[FAU]', "confirmed": set(), "exclude": set()},
+    "emily-levesque": {"query": '"Levesque, Emily"[FAU]', "confirmed": set(),
+                       "exclude": {"29434254"}},  # BMC 2018: Will said ignore for now (26 Oct 2026)
     "kate-roh": {"query": '"Roh, Younjoo"[FAU] OR "Roh, Kate"[FAU]', "confirmed": set(), "exclude": set()},
 }
 
