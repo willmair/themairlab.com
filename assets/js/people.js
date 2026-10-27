@@ -57,7 +57,7 @@ window.PEOPLE = {
     // Doctoral students
     { group: "phd", name: "Maria Perez Matos", role: "Ph.D. student (BPH)", years: "2019–2025", slug: "maria-perez-matos", links: { linkedin: "https://www.linkedin.com/in/maria-22-perezmatos/" } },
     { group: "phd", name: "Hannah Smith", role: "Ph.D. student (BPH)", years: "2018–2024", slug: "hannah-smith", links: { linkedin: "https://www.linkedin.com/in/hjsmithphd/" } },
-    { group: "phd", name: "Ewelina Nowak", role: "Ph.D. student (MCO)", years: "2022–2023", slug: "ewelina-nowak" },
+    { group: "phd", name: "Ewelina Nowak", role: "Ph.D. student (MCO)", years: "2022–2023", now: "Ph.D. student, Lee Lab, Harvard University", slug: "ewelina-nowak", links: { web: "https://www.mcb.harvard.edu/directory/ewelina-nowak/" } },
     { group: "phd", name: "Samuel Lapp", role: "Ph.D. student (BPH)", years: "2021–2023", now: "Postdoctoral Fellow, Salk Institute for Biological Studies", slug: "samuel-lapp", links: { linkedin: "https://www.linkedin.com/in/samuel-lapp-b5a100189/" } },
     { group: "phd", name: "Noel Jackson", role: "Ph.D. student (BBS)", years: "2020–2023", now: "Ph.D. student, Harvard University", slug: "noel-jackson", links: { linkedin: "https://www.linkedin.com/in/noelajackson/" } },
     { group: "phd", name: "Pallas Yao", role: "Ph.D. student (BPH), then postdoc", years: "2017–2022", now: "Domain Researcher and Scientific Writer, Avandar Labs", slug: "pallas-yao", photo: "assets/img/people/pallas-yao.jpg", links: { linkedin: "https://www.linkedin.com/in/pallas-yao/" } },
