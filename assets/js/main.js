@@ -150,11 +150,9 @@
     var other = rec.papers.filter(function (p) { return !p.lab; });
     if (!rec.papers.length) {
       mine.innerHTML = '<div class="empty">No publications yet. Papers appear here automatically once they are indexed in PubMed.</div>';
-    } else if (withLab.length && other.length) {
-      mine.innerHTML = '<h3 class="pubs-sub">With the MAIR Lab</h3>' + byYear(withLab) +
-        '<h3 class="pubs-sub">Other publications</h3>' + byYear(other);
     } else {
-      mine.innerHTML = byYear(rec.papers);
+      mine.innerHTML = (withLab.length ? '<h3 class="pubs-sub">With the MAIR Lab</h3>' + byYear(withLab) : "") +
+        (other.length ? '<h3 class="pubs-sub">Other publications</h3>' + byYear(other) : "");
     }
   }
 
