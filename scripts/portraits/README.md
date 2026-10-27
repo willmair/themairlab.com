@@ -2,7 +2,7 @@
 
 All headshots on the site share one crop: 4:5 portrait (960×1200 current members, 480×600 alumni),
 eyes at the same height and size. Each photo keeps its own original background (Will's choice,
-27 Oct 2026: the cut-outs on a stone background looked odd). Scout's photo is her own. Originals live in `OneDrive/06 Career & Admin/Admin_WM+TK/Lab Headshots`.
+27 Oct 2026: the cut-outs on a stone background looked odd). Scout's photo is her own. Originals live in `OneDrive/06 Career & Admin/Admin_WM+TK/Lab Headshots`; Will's is `OneDrive/William Mair Website/_originals/casual-headshot.jpg` (in front of the ship).
 
 To add or replace someone (macOS; uses Apple's built-in subject detection, no uploads):
 
