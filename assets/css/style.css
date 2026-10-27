@@ -609,6 +609,3 @@ a.news-title:hover { color: var(--accent); }
 .lightbox figure { grid-row: 1; }
 .lightbox .lb-close { position: absolute; top: 12px; right: 16px; }
 @media (max-width: 640px) { .lightbox[open] { grid-template-columns: 40px 1fr 40px; } .lightbox button { font-size: 2rem; padding: 6px; } }
-.lab-lab { margin: 48px 0 0; font-size: .88rem; color: var(--muted); }
-.lab-lab a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-.lab-lab a:hover { color: var(--accent); }
