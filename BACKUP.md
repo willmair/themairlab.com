@@ -80,7 +80,23 @@ kit, briefing setup and the lab website are yours; personnel records are not.
 | Monday briefing (email and calendar) | Reads Harvard Outlook | Point it at your new mailbox; the website and CV steps keep working |
 | Site text | Says Harvard T.H. Chan School of Public Health throughout | Update the affiliation in `scripts/build.py` (footer) and page text if your position changes |
 
-## Part 4. The simplest habit
+## Part 4. The one-command backup (set up 26 October 2026)
 
-Once a month, copy `CV/`, `Chief of Staff/` and `MAIR Lab Brand/` to your personal storage. Everything
-else is either already on GitHub or changes rarely.
+A script copies everything in the Part 3 table to **iCloud Drive > MAIR Lab Backup**, which syncs to your
+Apple account, outside Harvard. Run it once a month (or after any CV update). In Terminal:
+
+    bash "$HOME/Library/CloudStorage/OneDrive-HarvardUniversity/MAIR Lab Website/scripts/backup_to_icloud.sh"
+
+Or ask your AI assistant: "run the iCloud backup". It takes under a minute.
+
+What it does:
+- refreshes the OneDrive copies of the Monday briefing instructions and your AI writing rules first;
+- copies `CV`, `Chief of Staff`, `MAIR Lab Brand`, the whole `MAIR Lab Website` folder (including `brand/`),
+  `01 Lab/Photos & Headshots` and `Admin_WM+TK/Lab Headshots`;
+- copies only the headshot images from the alumni folders, never the confidential trainee records;
+- only adds and updates files, never deletes from the backup, and writes the date to `backup-log.txt`.
+
+If you reorganize OneDrive and a folder moves, the script says "Skipped (not found, maybe moved)". Ask your
+assistant to update the folder list in `scripts/backup_to_icloud.sh`.
+
+The first backup ran on 26 October 2026: 214 MB, the CV copy checked identical to the original.
