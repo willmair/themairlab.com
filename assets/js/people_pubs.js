@@ -3022,6 +3022,35 @@ window.PEOPLE_PUBS = {
    }
   ]
  },
+ "robin-yeo": {
+  "names": [
+   "Yeo R"
+  ],
+  "papers": [
+   {
+    "pmid": "25723162",
+    "year": 2015,
+    "title": "Neuronal CRTC-1 governs systemic mitochondrial metabolism and lifespan via a catecholamine signal",
+    "authors": [
+     "Burkewitz K",
+     "Morantte I",
+     "Weir HJM",
+     "Yeo R",
+     "Zhang Y",
+     "Huynh FK",
+     "Ilkayeva OR",
+     "Hirschey MD",
+     "Grant AR",
+     "Mair WB"
+    ],
+    "journal": "Cell",
+    "doi": "10.1016/j.cell.2015.02.004",
+    "kind": "article",
+    "featured": true,
+    "lab": true
+   }
+  ]
+ },
  "emina-tabakovic": {
   "names": [
    "Tabakovic E"

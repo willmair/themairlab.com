@@ -73,7 +73,7 @@ window.PEOPLE = {
     { group: "staff", name: "Rohan Sehgal", role: "Research Assistant", years: "2018–2019", slug: "rohan-sehgal" },
     { group: "staff", name: "Emina Tabakovic", role: "Research Assistant", years: "2017–2018", slug: "emina-tabakovic" },
     { group: "staff", name: "Nicole Clark", role: "Research Assistant", years: "2016–2018", slug: "nicole-clark" },
-    { group: "staff", name: "Robin Yao", role: "Research Assistant", years: "2013" },
+    { group: "staff", name: "Robin Yeo", role: "Research Assistant", years: "2013", slug: "robin-yeo" },
 
     // Post-bacs, visiting and undergraduate researchers
     { group: "student", name: "Ana Gallegos Cruz", role: "Postbaccalaureate Researcher", years: "2024" },

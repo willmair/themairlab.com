@@ -57,6 +57,7 @@ PEOPLE = {
     "peter-stine": ("Peter", ["Stine PG"]),
     "ianessa-morantte": ("Ianessa", ["Morantte I"]),
     "rohan-sehgal": ("Rohan", ["Sehgal R"]),
+    "robin-yeo": ("Robin", ["Yeo R"]),
     "emina-tabakovic": ("Emina", ["Tabakovic E"]),
     "nicole-clark": ("Nicole", ["Clark NM", "Clark N"]),
     "lourdes-pajuelo": ("Lourdes", ["Pajuelo Torres L", "Pajuelo L"]),
