@@ -97,6 +97,7 @@ FOOT = """</main>
           <li><a href="research.html">Research</a></li>
           <li><a href="geroscience.html">Geroscience</a></li>
           <li><a href="people.html">People</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
           <li><a href="publications.html">Publications</a></li>
           <li><a href="news.html">News &amp; media</a></li>
           <li><a href="join.html">Join the lab</a></li>
