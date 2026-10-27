@@ -15,7 +15,9 @@ Static website for the Metabolism and Aging Integrative Research (MAIR) Lab (Har
 
 The `*.html` files in the root are generated — edit `pages/` instead.
 
-Member photos go in `assets/img/people/` (square, ~800px JPG) and are referenced with `photo:` in `people.js`.
+Member photos go in `assets/img/people/` (4:5 portraits; see `scripts/portraits/README.md`) and are referenced with `photo:` in `people.js`.
+
+To rebuild everything on a new computer or with a new assistant, see `REBUILD.md`; working rules are in `CLAUDE.md`.
 
 ## Preview locally
 
