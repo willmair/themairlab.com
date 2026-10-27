@@ -1,0 +1,86 @@
+<!--
+title: SKI LODGE
+description: SKI LODGE (single-copy knock-in loci for defined gene expression): CRISPR/Cas9 safe-harbor strains for single-copy transgenes in C. elegans, from the MAIR Lab (Silva-García et al., G3 2019).
+theme: light
+-->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Resource</div>
+    <h1 class="display">SKI <em>LODGE</em></h1>
+    <p class="lede">Single-copy knock-in loci for defined gene expression in <em>C. elegans</em>.</p>
+  </div>
+</section>
+
+<section class="section ski">
+  <div class="wrap ski-wrap">
+    <nav class="ski-toc" aria-label="On this page">
+      <a href="#about">About</a>
+      <a href="#overview">Overview</a>
+      <a href="#guide">Step by step guide</a>
+      <a href="#strains">Strains</a>
+    </nav>
+
+    <h2 class="h2 ski-h" id="about">About</h2>
+    <p>We have generated a single-copy knock-in loci for defined gene expression (SKI LODGE) system to insert any DNA by CRISPR/Cas9 at defined safe harbors in the <em>C. elegans</em> genome. Utilizing a single crRNA guide, which also acts as a Co-CRISPR enrichment marker, any DNA sequence can be introduced as a single copy, regulated by different tissue-specific promoters. The SKI LODGE system provides a fast, economical and effective approach for generating single-copy ectopic transgenes in <em>C. elegans</em>.</p>
+    <p class="ski-ref">Silva-García CG, Lanjuin A, Heintz C, Dutta S, Clark NM, Mair WB. Single-copy knock-in loci for defined gene expression in <em>Caenorhabditis elegans</em>. <em>G3 (Bethesda)</em> 2019; 9(7): 2195-2198. <a href="https://doi.org/10.1534/g3.119.400314" target="_blank" rel="noopener">doi:10.1534/g3.119.400314</a></p>
+
+    <h2 class="h2 ski-h" id="overview">Overview</h2>
+    <p>The SKI LODGE cassettes were introduced into intergenic regions that are known to give stable expression.</p>
+    <figure class="ski-fig">
+      <picture>
+        <source srcset="assets/img/skilodge/cassette-insertion.webp" type="image/webp">
+        <img src="assets/img/skilodge/cassette-insertion.png" alt="A SKI LODGE cassette (tissue-specific promoter, 3xFLAG, dpy-10 site, general 3' UTR) inserted into an intergenic region" width="1600" height="416">
+      </picture>
+    </figure>
+    <p>The SKI LODGE system allows insertion of single-copy transgenes in <em>C. elegans</em> into safe harbor loci using CRISPR/Cas9 editing. Utilizing the <em>dpy-10</em> crRNA guide both for knock-in and Co-CRISPR edits, the gene of interest can be introduced as a single copy, regulated by different tissue-specific promoters.</p>
+    <figure class="ski-fig">
+      <picture>
+        <source srcset="assets/img/skilodge/gene-knock-in.webp" type="image/webp">
+        <img src="assets/img/skilodge/gene-knock-in.png" alt="The gene of interest replaces the dpy-10 site in the cassette, between 3xFLAG and the general 3' UTR" width="1600" height="434">
+      </picture>
+    </figure>
+
+    <h3 class="ski-sub">Summarized protocol</h3>
+    <ol class="ski-steps">
+      <li>Select the SKI LODGE strain to express the gene of interest.</li>
+      <li>Design primers with homologous recombination arms (~35 bp) for the SKI LODGE cassette (review sequences in the step by step guide and the strains below).</li>
+      <li>Assemble the CRISPR/Cas9 complex <em>in vitro</em>.</li>
+      <li>Inject.</li>
+      <li>3-4 days after injection, screen for dumpy/roller worms.</li>
+      <li>Single out worms and look for fluorescent expression or genotype them.</li>
+      <li>Outcross.</li>
+    </ol>
+
+    <h2 class="h2 ski-h" id="guide">Step by step guide</h2>
+    <p>The full step by step guide to inserting your gene of interest into the SKI LODGE lines is File S2 of the paper's supplemental material, along with the supplemental methods (File S1).</p>
+    <p class="links">
+      <a href="https://ndownloader.figshare.com/files/15081038" target="_blank" rel="noopener">Step by step guide (PDF)</a>
+      <a href="https://ndownloader.figshare.com/files/15081047" target="_blank" rel="noopener">Supplemental methods (PDF)</a>
+      <a href="https://doi.org/10.25387/g3.8085740" target="_blank" rel="noopener">All supplemental material</a>
+    </p>
+
+    <h2 class="h2 ski-h" id="strains">Strains</h2>
+    <p>The SKI LODGE strains are available from the <a href="https://cgc.umn.edu/" target="_blank" rel="noopener">Caenorhabditis Genetics Center (CGC)</a>. Strain names link to their CGC pages.</p>
+    <div class="ski-table-wrap">
+      <table class="ski-table">
+        <thead>
+          <tr><th>Strain</th><th>Short description</th><th>Expression</th><th>Chromosome position</th><th>Verified expression with</th><th>Genotype</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><a href="https://cgc.umn.edu/strain/WBM1119" target="_blank" rel="noopener">WBM1119</a></td><td><em>pie-1</em> promoter</td><td>Germline</td><td>III: 7.00 Mb</td><td>GFP</td><td>N2, wbmIs60[pie-1p::3XFLAG::dpy-10 crRNA::unc-54 3'UTR, III:7007600]</td></tr>
+          <tr><td><a href="https://cgc.umn.edu/strain/WBM1126" target="_blank" rel="noopener">WBM1126</a></td><td><em>myo-3</em> promoter</td><td>Muscles</td><td>I: 2.85 Mb</td><td>wrmScarlet</td><td>N2, wbmIs61[myo-3p::3XFLAG::dpy-10 crRNA::unc-54 3'UTR, I:2851000]</td></tr>
+          <tr><td><a href="https://cgc.umn.edu/strain/WBM1140" target="_blank" rel="noopener">WBM1140</a></td><td><em>eft-3</em> promoter</td><td>Ubiquitous</td><td>V: 8.64 Mb</td><td>wrmScarlet</td><td>N2, wbmIs65[eft-3p::3XFLAG::dpy-10 crRNA::unc-54 3'UTR, V:8645000]</td></tr>
+          <tr><td><a href="https://cgc.umn.edu/strain/WBM1141" target="_blank" rel="noopener">WBM1141</a></td><td><em>rab-3</em> promoter</td><td>Neurons</td><td>IV: 5.01 Mb</td><td>wrmScarlet</td><td>N2, wbmIs66[rab-3p::3XFLAG::dpy-10 crRNA::rab-3 3'UTR, IV:5015000]</td></tr>
+          <tr><td><a href="https://cgc.umn.edu/strain/WBM1179" target="_blank" rel="noopener">WBM1179</a></td><td><em>eft-3</em> promoter</td><td>Ubiquitous</td><td>IV: 5.01 Mb</td><td>GFP</td><td>N2, wbmIs76[eft-3p::3XFLAG::dpy-10 crRNA::unc-54 3'UTR, IV:5015000]</td></tr>
+          <tr><td><a href="https://cgc.umn.edu/strain/WBM1214" target="_blank" rel="noopener">WBM1214</a></td><td><em>eft-3</em> promoter + SL2::wrmScarlet</td><td>Ubiquitous</td><td>V: 8.64 Mb</td><td>N/A</td><td>N2, wbmIs88[eft-3p::3XFLAG::dpy-10 crRNA::SL2::wrmScarlet::unc-54 3'UTR, *wbmIs67]</td></tr>
+          <tr><td><a href="https://cgc.umn.edu/strain/WBM1215" target="_blank" rel="noopener">WBM1215</a></td><td><em>rab-3</em> promoter + SL2::wrmScarlet</td><td>Neurons</td><td>IV: 5.01 Mb</td><td>N/A</td><td>N2, wbmIs89[rab-3p::3XFLAG::dpy-10 crRNA::SL2::wrmScarlet::rab-3 3'UTR, *wbmIs68]</td></tr>
+          <tr><td><a href="https://cgc.umn.edu/strain/WBM1216" target="_blank" rel="noopener">WBM1216</a>*</td><td><em>ges-1</em> promoter + SL2::wrmScarlet</td><td>Intestine</td><td>V: 8.64 Mb</td><td>N/A</td><td>N2, wbmIs96[ges-1p::3XFLAG::dpy-10 crRNA::SL2::wrmScarlet::unc-54 3'UTR, *wbmIs88]</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="ski-note">* At our request, the CGC has suspended distribution of WBM1216. We were able to insert cDNAs into this strain and edit sequences by CRISPR, but could not then detect the proteins by Western blot. If you have questions about this strain, please <a href="contact.html">contact us</a>.</p>
+    <p class="ski-note">For the sequence of any SKI LODGE cassette, please <a href="contact.html">contact us</a>.</p>
+
+    <p class="ski-back"><a class="text-link" href="index.html">Visit the MAIR Lab →</a></p>
+  </div>
+</section>
