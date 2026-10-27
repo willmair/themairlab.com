@@ -1,7 +1,8 @@
 # Rebuilding and running themairlab.com
 
 Everything needed to recreate, run and keep this site current, on a new computer, a new Claude account
-or a different AI assistant. Read this first, then `CLAUDE.md` (the working rules).
+or a different AI assistant. Read this first, then `CLAUDE.md` (the working rules). For what to back up
+outside Harvard OneDrive, and which accounts depend on Harvard, see `BACKUP.md`.
 
 ## Where everything lives
 

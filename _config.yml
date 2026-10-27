@@ -2,6 +2,7 @@
 exclude:
   - CLAUDE.md
   - REBUILD.md
+  - BACKUP.md
   - README.md
   - scripts
   - pages
