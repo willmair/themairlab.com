@@ -614,6 +614,7 @@ a.news-title:hover { color: var(--accent); }
 .era-break { margin: 88px 0 0; padding-top: 40px; border-top: 1px solid var(--ink); }
 .era-break p { color: var(--muted); max-width: 60ch; margin: 14px 0 0; }
 /* ---------- The March of Aging ---------- */
+.page-hero-plain { border-bottom: 0; }
 .march { padding-top: 40px; }
 .march-art { margin: 0 auto; max-width: 900px; }
 .march-art img { width: 100%; height: auto; -webkit-user-drag: none; user-select: none; }
