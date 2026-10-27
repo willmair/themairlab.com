@@ -261,6 +261,7 @@ h1, h2, h3 { margin: 0; font-weight: 400; letter-spacing: -0.015em; }
 .timeline { list-style: none; padding: 0; margin: 32px 0 0; border-top: 1px solid var(--line); }
 .timeline li { display: grid; grid-template-columns: 120px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: .95rem; }
 .timeline span { color: var(--muted); }
+.pi-side .links { margin-top: 24px; }
 .pi-facts { display: grid; gap: 48px; margin-top: 64px; }
 @media (min-width: 900px) { .pi-facts { grid-template-columns: 1.35fr 1fr 1fr; gap: 48px; } }
 .pi-facts .eyebrow { margin: 0 0 14px; }
