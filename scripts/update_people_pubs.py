@@ -62,6 +62,7 @@ PEOPLE = {
     "nicole-clark": ("Nicole", ["Clark NM", "Clark N"]),
     "lourdes-pajuelo": ("Lourdes", ["Pajuelo Torres L", "Pajuelo L"]),
     "raymond-laboy-morales": ("Raymond", ["Laboy R"]),
+    "iris-lee": ("Chia-Lin", ["Lee CL"]),
 }
 
 # In the CV but not on PubMed. Matched to people by author name like any lab paper.

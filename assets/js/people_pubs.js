@@ -3199,5 +3199,34 @@ window.PEOPLE_PUBS = {
     "lab": true
    }
   ]
+ },
+ "iris-lee": {
+  "names": [
+   "Lee CL"
+  ],
+  "papers": [
+   {
+    "pmid": "31411562",
+    "year": 2019,
+    "title": "Neuronal TORC1 modulates longevity via AMPK and cell nonautonomous regulation of mitochondrial dynamics in C. elegans",
+    "authors": [
+     "Zhang Y",
+     "Lanjuin A",
+     "Chowdhury SR",
+     "Mistry M",
+     "Silva-García CG",
+     "Weir HJ",
+     "Lee CL",
+     "Escoubas CC",
+     "Tabakovic E",
+     "Mair WB"
+    ],
+    "journal": "Elife",
+    "doi": "10.7554/eLife.49158",
+    "kind": "article",
+    "featured": true,
+    "lab": true
+   }
+  ]
  }
 };
