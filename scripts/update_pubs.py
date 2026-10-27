@@ -25,7 +25,13 @@ EXCLUDE = {
 FEATURED = ["42162381", "41270125", "29107506", "27919065", "25723162", "21331044", "31411562", "32905769", "37946042", "37721956", "39572679"]
 OUT = pathlib.Path(__file__).resolve().parent.parent / "assets" / "js" / "pubs.js"
 PENDING = pathlib.Path(__file__).resolve().parent / "pending_pubs.json"
-DEFAULT_CV = pathlib.Path.home() / "Library/CloudStorage/OneDrive-HarvardUniversity/CV/Mair_CV_2026.docx"
+CV_DIR = pathlib.Path.home() / "Library/CloudStorage/OneDrive-HarvardUniversity/CV"
+
+
+def latest_cv():
+    # the CV is saved with a date (Mair_CV_2026-10-26.docx); use the newest one
+    cvs = sorted(CV_DIR.glob("Mair_CV_*.docx"), key=lambda f: f.stat().st_mtime)
+    return cvs[-1] if cvs else CV_DIR / "Mair_CV.docx"
 
 
 def norm(text):
@@ -33,7 +39,8 @@ def norm(text):
 
 
 def cv_text():
-    cv = pathlib.Path(sys.argv[sys.argv.index("--cv") + 1]) if "--cv" in sys.argv else DEFAULT_CV
+    cv = pathlib.Path(sys.argv[sys.argv.index("--cv") + 1]) if "--cv" in sys.argv else latest_cv()
+    print(f"Checking against {cv.name}")
     if not cv.exists():
         sys.exit(f"CV not found: {cv}  (pass --cv PATH)")
     txt = subprocess.run(["textutil", "-convert", "txt", "-stdout", str(cv)], capture_output=True, text=True).stdout
