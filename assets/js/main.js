@@ -196,7 +196,7 @@
     }).join("");
   }
   document.querySelectorAll("[data-team-count]").forEach(function (el) {
-    if (window.PEOPLE) el.textContent = window.PEOPLE.current.filter(function (m) { return !/dog/i.test(m.role); }).length + 1;
+    if (window.PEOPLE) el.textContent = window.PEOPLE.current.filter(function (m) { return !m.dog; }).length + 1;
   });
   document.querySelectorAll("[data-alumni-count]").forEach(function (el) {
     if (window.PEOPLE) el.textContent = window.PEOPLE.alumni.length;
