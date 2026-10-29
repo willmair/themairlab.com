@@ -149,11 +149,11 @@ OUTSIDE = {
         "query": '"Kraft, Jamie D"[FAU] OR "Kraft, Jamie"[FAU] OR 0000-0001-6336-9997[auid]',
         # University of Gothenburg (Wallenberg Laboratory)
         "confirmed": {"33801198", "33803130", "34022871", "34204944", "35104001", "35789845", "37532933",
-                      "37658064"},
-        "exclude": {"27916805"},  # Ottawa 2016 review: Will said ignore for now (26 Oct 2026)
+                      "37658064", "27916805"},  # 27916805: Ottawa 2016 review, Jamie's master's (her email, 27 Oct 2026)
+        "exclude": set(),
     },
     "emily-levesque": {"query": '"Levesque, Emily"[FAU]', "confirmed": set(),
-                       "exclude": {"29434254"}},  # BMC 2018: Will said ignore for now (26 Oct 2026)
+                       "exclude": {"29434254"}},  # J Perinatol 2018: not Emily's (her email, Oct 2026)
     "kate-roh": {"query": '"Roh, Younjoo"[FAU] OR "Roh, Kate"[FAU]', "confirmed": set(), "exclude": set()},
 }
 

@@ -1024,6 +1024,19 @@ window.PEOPLE_PUBS = {
     "journal": "Int J Mol Sci",
     "doi": "10.3390/ijms22052750",
     "kind": "review"
+   },
+   {
+    "pmid": "27916805",
+    "year": 2016,
+    "title": "Roles of MicroRNA across Prenatal and Postnatal Periods",
+    "authors": [
+     "Floris I",
+     "Kraft JD",
+     "Altosaar I"
+    ],
+    "journal": "Int J Mol Sci",
+    "doi": "10.3390/ijms17121994",
+    "kind": "review"
    }
   ]
  },
